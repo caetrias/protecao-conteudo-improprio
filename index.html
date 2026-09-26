@@ -17,13 +17,10 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=2" />
+    <link rel="stylesheet" href="styles.css?v=3" />
   </head>
 
   <body>
-    <!-- ======================================================
-         Ícones (sprite) — usados via <use href="#i-...">
-         ====================================================== -->
     <svg width="0" height="0" style="position: absolute" aria-hidden="true">
       <symbol id="i-marca" viewBox="0 0 32 32">
         <path d="M16 2.5 4.5 6.8v8.4c0 7.3 4.9 12.6 11.5 14.8 6.6-2.2 11.5-7.5 11.5-14.8V6.8L16 2.5z" fill="currentColor" />
@@ -41,17 +38,8 @@
       <symbol id="i-escudo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M12 2.5 4 5.5v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10v-6l-8-3z" /><path d="m8.8 12 2.2 2.2 4.2-4.4" />
       </symbol>
-      <symbol id="i-relogio" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" />
-      </symbol>
-      <symbol id="i-video" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="3" y="5" width="13" height="14" rx="2.5" /><path d="m16 10 5-3v10l-5-3" />
-      </symbol>
       <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
         <path d="M5 12.5l4.5 4.5L19 7.5" />
-      </symbol>
-      <symbol id="i-voltar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M15 18l-6-6 6-6" />
       </symbol>
       <symbol id="i-baixo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
         <path d="m6 9 6 6 6-6" />
@@ -73,9 +61,7 @@
       </symbol>
     </svg>
 
-    <!-- ======================================================
-         Topo
-         ====================================================== -->
+    <!-- Topo -->
     <header class="topo">
       <div class="container">
         <a class="marca" href="#inicio" aria-label="Proteção Digital da Família — início">
@@ -87,29 +73,14 @@
     </header>
 
     <main id="inicio">
-      <!-- ======================================================
-           Abertura
-           ====================================================== -->
+      <!-- Abertura -->
       <section class="abertura">
         <div class="container">
-          <span class="selo">Seu guia em vídeo</span>
           <h1>Proteja o celular do seu filho contra <em>conteúdo impróprio</em></h1>
-          <p class="lead">
-            Vídeos curtos mostrando exatamente onde tocar. Você não precisa
-            entender de tecnologia.
-          </p>
-
-          <ol class="como-funciona">
-            <li><span class="num">1</span><span>Escolha o cenário da sua família</span></li>
-            <li><span class="num">2</span><span>Assista ao vídeo de cada tarefa</span></li>
-            <li><span class="num">3</span><span>Faça junto e marque como feito</span></li>
-          </ol>
         </div>
       </section>
 
-      <!-- ======================================================
-           Nota ECA Digital
-           ====================================================== -->
+      <!-- Nota ECA Digital -->
       <div class="container">
         <details class="nota">
           <summary>
@@ -126,23 +97,18 @@
             </p>
             <p>
               Por isso a Apple, o Google e os apps deste guia lançaram tantos
-              controles novos. Os passos aqui já refletem essas mudanças, mas os
-              menus continuam evoluindo. Se algo estiver diferente no seu
-              aparelho, procure pelo nome da opção.
+              controles novos. Se algum menu estiver diferente no seu aparelho,
+              procure pelo nome da opção.
             </p>
           </div>
         </details>
       </div>
 
-      <!-- ======================================================
-           Escolha do cenário
-           ====================================================== -->
+      <!-- Escolha do cenário -->
       <section class="secao" id="escolha">
         <div class="container">
           <div class="secao-titulo">
             <h2>Qual é o seu caso?</h2>
-            <p>Faça só o cenário que se aplica a você.</p>
-            <div class="divisor"></div>
           </div>
 
           <nav class="cenarios" aria-label="Cenários">
@@ -178,73 +144,57 @@
               <span class="feito-tag">Concluído</span>
               <span class="aparelho"><svg aria-hidden="true"><use href="#i-escudo-mais" /></svg></span>
               <div>
-                <span class="rotulo">Opcional · vale para todos</span>
+                <span class="rotulo">Opcional</span>
                 <h3>Proteções extras</h3>
-                <span class="meta">15–20 min · reforço depois do seu cenário</span>
+                <span class="meta">15 min · 6 vídeos</span>
               </div>
             </a>
           </nav>
-
-          <p class="dica-escolha">
-            Tem mais de um filho ou aparelho? Faça um cenário por vez.
-          </p>
         </div>
       </section>
 
-      <!-- ======================================================
-           CENÁRIO 1 — iPhone da criança
-           ====================================================== -->
+      <!-- CENÁRIO 1 — iPhone da criança -->
       <section class="cenario" id="iphone-crianca" aria-labelledby="t-c1">
         <div class="container">
           <div class="cenario-cabecalho">
-            <a class="voltar" href="#escolha"><svg aria-hidden="true"><use href="#i-voltar" /></svg>Trocar de cenário</a>
-            <p class="rotulo">Cenário 1 · iPhone</p>
-            <h2 id="t-c1">O iPhone é da criança</h2>
-            <div class="chips">
-              <span class="chip"><svg aria-hidden="true"><use href="#i-relogio" /></svg>10 minutos</span>
-              <span class="chip"><svg aria-hidden="true"><use href="#i-video" /></svg>4 vídeos</span>
-            </div>
+            <p class="rotulo">iPhone</p>
+            <h2 id="t-c1">Celular da criança</h2>
           </div>
 
           <div class="progresso">
-            <div class="progresso-topo"><span>Seu progresso</span><span class="conta">0 de 4 tarefas</span></div>
-            <div class="barra" role="progressbar" aria-label="Progresso do cenário" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
+            <div class="progresso-topo"><span class="conta">0 de 4 tarefas</span></div>
+            <div class="barra" role="progressbar" aria-label="Progresso" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
           </div>
 
           <div class="caixa protegido">
-            <h3><svg aria-hidden="true"><use href="#i-escudo" /></svg>O que será protegido</h3>
+            <h3><svg aria-hidden="true"><use href="#i-escudo" /></svg>O que fica protegido</h3>
             <ul class="lista-check">
-              <li><strong>Navegador:</strong> Safari e qualquer outro instalado bloqueiam sites adultos, sem aba anônima</li>
-              <li><strong>Navegador dentro de outros apps:</strong> links abertos por dentro de apps também são filtrados</li>
-              <li><strong>App Store:</strong> só aparece o que é da faixa etária da criança</li>
-              <li><strong>Mensagens, FaceTime, AirDrop e Fotos:</strong> nudez desfocada automaticamente</li>
-              <li><strong>YouTube:</strong> só conteúdo que você aprovou</li>
+              <li><strong>Navegadores:</strong> sites adultos bloqueados, sem aba anônima</li>
+              <li><strong>Links dentro de outros apps:</strong> também filtrados</li>
+              <li><strong>App Store:</strong> só apps da idade da criança</li>
+              <li><strong>Mensagens, FaceTime, AirDrop e Fotos:</strong> nudez desfocada</li>
+              <li><strong>YouTube:</strong> só o que você aprovar</li>
             </ul>
           </div>
 
           <div class="tarefas">
-            <!-- Tarefa 1 -->
             <article class="tarefa" data-id="c1-t1">
               <div class="tarefa-topo">
                 <span class="tarefa-num">1</span>
-                <div>
-                  <h3>Ativar o Tempo de Uso como aparelho de criança</h3>
-                  <p class="sub">No iPhone da criança</p>
-                </div>
+                <h3>Ativar o Tempo de Uso</h3>
               </div>
               <div class="tarefa-corpo">
                 <div class="video" data-video-id="" data-titulo="Ativar o Tempo de Uso"></div>
                 <div>
-                  <p class="caminho">Onde fica</p>
                   <div class="trilha"><span>Ajustes</span><i>›</i><span>Tempo de Uso</span></div>
                   <ol class="passos">
-                    <li>Toque em <strong>Ativar Tempo de Uso</strong> › <strong>Continuar</strong> e escolha <strong>“Esse iPhone é de uma criança”</strong>.</li>
-                    <li>Informe a idade da criança. O iPhone já aplica restrições automáticas para essa idade.</li>
-                    <li>Crie um <strong>Código do Tempo de Uso</strong> diferente da senha de desbloqueio e informe o seu Apple ID para recuperação.</li>
+                    <li>Toque em <strong>Ativar Tempo de Uso</strong> e escolha <strong>“Esse iPhone é de uma criança”</strong>.</li>
+                    <li>Informe a idade da criança.</li>
+                    <li>Crie um <strong>Código do Tempo de Uso</strong> diferente da senha do celular.</li>
                   </ol>
                   <div class="aviso">
                     <svg aria-hidden="true"><use href="#i-alerta" /></svg>
-                    <span>Guarde o código num lugar que só você acessa. Se a criança souber, ela consegue desfazer tudo.</span>
+                    <span>Não conte o código para a criança.</span>
                   </div>
                   <button class="btn-feito" type="button" aria-pressed="false">
                     <svg aria-hidden="true"><use href="#i-check" /></svg><span class="txt">Marcar como feito</span>
@@ -253,25 +203,19 @@
               </div>
             </article>
 
-            <!-- Tarefa 2 -->
             <article class="tarefa" data-id="c1-t2">
               <div class="tarefa-topo">
                 <span class="tarefa-num">2</span>
-                <div>
-                  <h3>Bloquear sites adultos e limitar a App Store</h3>
-                  <p class="sub">No iPhone da criança</p>
-                </div>
+                <h3>Bloquear sites adultos e limitar a App Store</h3>
               </div>
               <div class="tarefa-corpo">
                 <div class="video" data-video-id="" data-titulo="Bloquear sites adultos e limitar a App Store"></div>
                 <div>
-                  <p class="caminho">Onde fica</p>
-                  <div class="trilha"><span>Ajustes</span><i>›</i><span>Tempo de Uso</span><i>›</i><span>Restrições de Conteúdo e Privacidade</span></div>
+                  <div class="trilha"><span>Tempo de Uso</span><i>›</i><span>Restrições de Conteúdo e Privacidade</span></div>
                   <ol class="passos">
                     <li>Ative <strong>Restrições de Conteúdo e Privacidade</strong>.</li>
-                    <li>Entre em <strong>Restrições de Conteúdo</strong> › <strong>Conteúdo da Web</strong> e escolha <strong>Limitar Sites Adultos</strong>. Isso também desativa a navegação privada e vale para o sistema todo.</li>
-                    <li>Se quiser bloquear um site específico, adicione em <strong>Nunca Permitir</strong>.</li>
-                    <li>Ainda em Restrições de Conteúdo, defina a classificação de <strong>Filmes, TV, Apps e Livros</strong> pela idade da criança.</li>
+                    <li>Em <strong>Restrições de Conteúdo › Conteúdo da Web</strong>, escolha <strong>Limitar Sites Adultos</strong>.</li>
+                    <li>Defina a classificação de <strong>Filmes, TV, Apps e Livros</strong> pela idade da criança.</li>
                   </ol>
                   <button class="btn-feito" type="button" aria-pressed="false">
                     <svg aria-hidden="true"><use href="#i-check" /></svg><span class="txt">Marcar como feito</span>
@@ -280,25 +224,18 @@
               </div>
             </article>
 
-            <!-- Tarefa 3 -->
             <article class="tarefa" data-id="c1-t3">
               <div class="tarefa-topo">
                 <span class="tarefa-num">3</span>
-                <div>
-                  <h3>Confirmar a Segurança na Comunicação</h3>
-                  <p class="sub">No iPhone da criança</p>
-                </div>
+                <h3>Conferir a Segurança na Comunicação</h3>
               </div>
               <div class="tarefa-corpo">
-                <div class="video" data-video-id="" data-titulo="Confirmar a Segurança na Comunicação"></div>
+                <div class="video" data-video-id="" data-titulo="Conferir a Segurança na Comunicação"></div>
                 <div>
-                  <p class="caminho">Onde fica</p>
-                  <div class="trilha"><span>Ajustes</span><i>›</i><span>Tempo de Uso</span><i>›</i><span>Segurança na Comunicação</span></div>
+                  <div class="trilha"><span>Tempo de Uso</span><i>›</i><span>Segurança na Comunicação</span></div>
                   <ol class="passos">
-                    <li>Confira se a opção está <strong>ativada</strong>. Ela já vem ligada para menores de 18 anos, mas vale confirmar.</li>
-                    <li>Com ela ativa, fotos e vídeos com nudez chegam <strong>desfocados</strong> em Mensagens, FaceTime, AirDrop e Álbuns Compartilhados.</li>
+                    <li>Confira se está <strong>ativada</strong>. Ela desfoca nudez em Mensagens, FaceTime, AirDrop e Fotos.</li>
                   </ol>
-                  <p class="sub" style="margin-top: 12px">A análise acontece no próprio iPhone. Nenhuma imagem é enviada para a Apple.</p>
                   <button class="btn-feito" type="button" aria-pressed="false">
                     <svg aria-hidden="true"><use href="#i-check" /></svg><span class="txt">Marcar como feito</span>
                   </button>
@@ -306,34 +243,24 @@
               </div>
             </article>
 
-            <!-- Tarefa 4 -->
             <article class="tarefa" data-id="c1-t4">
               <div class="tarefa-topo">
                 <span class="tarefa-num">4</span>
-                <div>
-                  <h3>Configurar o YouTube Kids</h3>
-                  <p class="sub">Recomendado para crianças de 5 a 8 anos</p>
-                </div>
+                <h3>Configurar o YouTube Kids</h3>
               </div>
               <div class="tarefa-corpo">
                 <div class="video" data-video-id="" data-titulo="Configurar o YouTube Kids no iPhone"></div>
                 <div>
-                  <p class="caminho">Onde fica</p>
-                  <div class="trilha"><span>App YouTube Kids</span><i>›</i><span>Cadeado</span><i>›</i><span>Configurações</span></div>
+                  <div class="trilha"><span>YouTube Kids</span><i>›</i><span>Cadeado</span><i>›</i><span>Configurações</span></div>
                   <ol class="passos">
-                    <li>Baixe o <strong>YouTube Kids</strong> e crie o perfil da criança ligado à sua conta Google.</li>
-                    <li>Escolha o nível de conteúdo: <strong>Pré-escolar</strong> ou <strong>Crianças menores</strong>.</li>
-                    <li>Toque no <strong>cadeado</strong> no rodapé e confirme com a senha da sua conta.</li>
+                    <li>Crie o perfil da criança e escolha o nível <strong>Pré-escolar</strong> ou <strong>Crianças menores</strong>.</li>
                     <li>Ative <strong>Somente Conteúdo Aprovado</strong>.</li>
-                    <li>Vá em <strong>Conteúdo Aprovado</strong>, toque em <strong>+</strong> e adicione os canais e vídeos que você conhece e confia.</li>
+                    <li>Em <strong>Conteúdo Aprovado</strong>, toque em <strong>+</strong> e adicione os canais que você confia.</li>
                   </ol>
                   <div class="aviso">
                     <svg aria-hidden="true"><use href="#i-alerta" /></svg>
-                    <span>Não pule o último passo. Sem canais aprovados, a lista fica vazia e a criança não vê nada.</span>
+                    <span>Sem canais aprovados, a criança não vê nada.</span>
                   </div>
-                  <p class="sub" style="margin-top: 12px">
-                    Se a criança usa o YouTube comum: toque no perfil › Configurações › ative o <strong>Modo Restrito</strong>. Repita em cada navegador que ela usar.
-                  </p>
                   <button class="btn-feito" type="button" aria-pressed="false">
                     <svg aria-hidden="true"><use href="#i-check" /></svg><span class="txt">Marcar como feito</span>
                   </button>
@@ -344,57 +271,45 @@
 
           <div class="caixa checklist">
             <h3><svg aria-hidden="true"><use href="#i-lista" /></svg>Teste se funcionou</h3>
-            <p>Leva 2 minutos. Marque cada teste depois de fazer.</p>
-            <label class="teste"><input type="checkbox" data-id="c1-c1" /><span>Abra o Safari e pesquise um termo adulto. A página deve ser bloqueada.</span></label>
-            <label class="teste"><input type="checkbox" data-id="c1-c2" /><span>Se houver outro navegador instalado (ex.: Chrome), faça o mesmo teste nele.</span></label>
-            <label class="teste"><input type="checkbox" data-id="c1-c3" /><span>Abra o YouTube e confira se só aparece conteúdo aprovado ou restrito.</span></label>
-            <label class="teste"><input type="checkbox" data-id="c1-c4" /><span>Abra a App Store e veja se os apps estão limitados pela idade.</span></label>
-            <label class="teste"><input type="checkbox" data-id="c1-c5" /><span>Confirme que o Código do Tempo de Uso está guardado só com você.</span></label>
+            <label class="teste"><input type="checkbox" data-id="c1-c1" /><span>Pesquise um termo adulto no Safari. Deve bloquear.</span></label>
+            <label class="teste"><input type="checkbox" data-id="c1-c2" /><span>Faça o mesmo em outro navegador instalado, se houver.</span></label>
+            <label class="teste"><input type="checkbox" data-id="c1-c3" /><span>Abra o YouTube. Só deve aparecer conteúdo aprovado.</span></label>
+            <label class="teste"><input type="checkbox" data-id="c1-c4" /><span>Abra a App Store. Os apps devem estar limitados pela idade.</span></label>
           </div>
 
           <div class="caixa conversa">
             <h3><svg aria-hidden="true"><use href="#i-conversa" /></svg>O que isso não resolve sozinho</h3>
-            <p>Nenhum filtro é 100% infalível. A configuração reduz muito o risco, mas não substitui a conversa. Uma frase simples já abre o caminho:</p>
-            <p class="fala">“Se um dia aparecer alguma coisa estranha na tela, você não fez nada de errado. É só me mostrar, tá?”</p>
-            <p>Assim a criança não sente que precisa esconder algo que escapou do filtro.</p>
+            <p>Nenhum filtro é 100% infalível. Combine com a criança:</p>
+            <p class="fala">“Se aparecer alguma coisa estranha na tela, você não fez nada de errado. É só me mostrar.”</p>
           </div>
 
           <div class="parabens" role="status">
             <h3>iPhone protegido!</h3>
-            <p>Você concluiu todas as tarefas deste cenário.</p>
           </div>
 
           <div class="proximo">
             <a class="btn" href="#extras">Ver proteções extras<svg aria-hidden="true"><use href="#i-direita" /></svg></a>
-            <p>Opcional: reforça a proteção em assistentes de voz, apps de IA e mais.</p>
           </div>
         </div>
       </section>
 
-      <!-- ======================================================
-           CENÁRIO 2 — iPhone dos pais emprestado
-           ====================================================== -->
+      <!-- CENÁRIO 2 — iPhone dos pais emprestado -->
       <section class="cenario" id="iphone-emprestado" aria-labelledby="t-c2">
         <div class="container">
           <div class="cenario-cabecalho">
-            <a class="voltar" href="#escolha"><svg aria-hidden="true"><use href="#i-voltar" /></svg>Trocar de cenário</a>
-            <p class="rotulo">Cenário 2 · iPhone</p>
-            <h2 id="t-c2">A criança usa o seu iPhone de vez em quando</h2>
-            <div class="chips">
-              <span class="chip"><svg aria-hidden="true"><use href="#i-relogio" /></svg>3 minutos</span>
-              <span class="chip"><svg aria-hidden="true"><use href="#i-video" /></svg>1 vídeo</span>
-            </div>
+            <p class="rotulo">iPhone</p>
+            <h2 id="t-c2">Celular dos pais emprestado</h2>
           </div>
 
           <div class="progresso">
-            <div class="progresso-topo"><span>Seu progresso</span><span class="conta">0 de 1 tarefa</span></div>
-            <div class="barra" role="progressbar" aria-label="Progresso do cenário" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
+            <div class="progresso-topo"><span class="conta">0 de 1 tarefa</span></div>
+            <div class="barra" role="progressbar" aria-label="Progresso" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
           </div>
 
           <div class="caixa protegido">
-            <h3><svg aria-hidden="true"><use href="#i-escudo" /></svg>O que será protegido</h3>
+            <h3><svg aria-hidden="true"><use href="#i-escudo" /></svg>O que fica protegido</h3>
             <ul class="lista-check">
-              <li>A criança fica <strong>travada dentro de um único app</strong> e não consegue sair navegando pelo resto do seu celular.</li>
+              <li>A criança fica <strong>presa em um único app</strong> e não mexe no resto do celular.</li>
             </ul>
           </div>
 
@@ -402,26 +317,18 @@
             <article class="tarefa" data-id="c2-t1">
               <div class="tarefa-topo">
                 <span class="tarefa-num">1</span>
-                <div>
-                  <h3>Ativar e usar o Acesso Guiado</h3>
-                  <p class="sub">No seu iPhone</p>
-                </div>
+                <h3>Ativar o Acesso Guiado</h3>
               </div>
               <div class="tarefa-corpo">
-                <div class="video" data-video-id="" data-titulo="Ativar e usar o Acesso Guiado"></div>
+                <div class="video" data-video-id="" data-titulo="Ativar o Acesso Guiado"></div>
                 <div>
-                  <p class="caminho">Onde fica</p>
                   <div class="trilha"><span>Ajustes</span><i>›</i><span>Acessibilidade</span><i>›</i><span>Acesso Guiado</span></div>
                   <ol class="passos">
-                    <li>Ative o <strong>Acesso Guiado</strong> e defina um código.</li>
-                    <li>Abra o app que a criança vai usar (ex.: YouTube Kids já configurado).</li>
-                    <li>Aperte o <strong>botão lateral 3 vezes</strong> e toque em <strong>Iniciar</strong>. Pronto: o iPhone fica preso naquele app.</li>
-                    <li>Para sair, aperte o botão lateral 3 vezes de novo e digite o código.</li>
+                    <li>Ative o <strong>Acesso Guiado</strong> e crie um código.</li>
+                    <li>Abra o app que a criança vai usar.</li>
+                    <li>Aperte o <strong>botão lateral 3 vezes</strong> e toque em <strong>Iniciar</strong>.</li>
+                    <li>Para sair: botão lateral 3 vezes + código.</li>
                   </ol>
-                  <div class="aviso">
-                    <svg aria-hidden="true"><use href="#i-alerta" /></svg>
-                    <span>Escolha um app já configurado com segurança, nunca o YouTube comum sem filtro.</span>
-                  </div>
                   <button class="btn-feito" type="button" aria-pressed="false">
                     <svg aria-hidden="true"><use href="#i-check" /></svg><span class="txt">Marcar como feito</span>
                   </button>
@@ -432,61 +339,44 @@
 
           <div class="caixa checklist">
             <h3><svg aria-hidden="true"><use href="#i-lista" /></svg>Teste se funcionou</h3>
-            <p>Marque cada teste depois de fazer.</p>
-            <label class="teste"><input type="checkbox" data-id="c2-c1" /><span>Com o Acesso Guiado ligado, tente sair do app pelo botão ou pelo gesto. Ele não deve sair.</span></label>
-            <label class="teste"><input type="checkbox" data-id="c2-c2" /><span>Confira se o app escolhido já está com o conteúdo filtrado.</span></label>
+            <label class="teste"><input type="checkbox" data-id="c2-c1" /><span>Tente sair do app. Não deve sair sem o código.</span></label>
           </div>
 
           <div class="caixa conversa">
             <h3><svg aria-hidden="true"><use href="#i-conversa" /></svg>O que isso não resolve sozinho</h3>
-            <p>O Acesso Guiado impede a criança de trocar de app, mas não filtra o que aparece dentro do app escolhido. Por isso ele só protege de verdade quando o app já está configurado, como o YouTube Kids do Cenário 1.</p>
-          </div>
-
-          <div class="caixa dica">
-            <h3><svg aria-hidden="true"><use href="#i-info" /></svg>Antes de emprestar</h3>
-            <p>Avise a criança do combinado. Assim ela não estranha quando o celular não deixar sair do app:</p>
-            <p class="fala">“Vou deixar só esse joguinho aberto pra você, tá? Se quiser outra coisa, me chama.”</p>
+            <p>O Acesso Guiado não filtra o que aparece dentro do app. Use um app já configurado, como o YouTube Kids, nunca o YouTube comum.</p>
           </div>
 
           <div class="parabens" role="status">
             <h3>Pronto para emprestar!</h3>
-            <p>Você concluiu a tarefa deste cenário.</p>
           </div>
 
           <div class="proximo">
             <a class="btn" href="#extras">Ver proteções extras<svg aria-hidden="true"><use href="#i-direita" /></svg></a>
-            <p>Opcional: reforça a proteção em assistentes de voz, apps de IA e mais.</p>
           </div>
         </div>
       </section>
 
-      <!-- ======================================================
-           CENÁRIO 3 — Android da criança
-           ====================================================== -->
+      <!-- CENÁRIO 3 — Android da criança -->
       <section class="cenario" id="android-crianca" aria-labelledby="t-c3">
         <div class="container">
           <div class="cenario-cabecalho">
-            <a class="voltar" href="#escolha"><svg aria-hidden="true"><use href="#i-voltar" /></svg>Trocar de cenário</a>
-            <p class="rotulo">Cenário 3 · Android</p>
-            <h2 id="t-c3">O Android é da criança</h2>
-            <div class="chips">
-              <span class="chip"><svg aria-hidden="true"><use href="#i-relogio" /></svg>10 minutos</span>
-              <span class="chip"><svg aria-hidden="true"><use href="#i-video" /></svg>3 vídeos</span>
-            </div>
+            <p class="rotulo">Android</p>
+            <h2 id="t-c3">Celular da criança</h2>
           </div>
 
           <div class="progresso">
-            <div class="progresso-topo"><span>Seu progresso</span><span class="conta">0 de 3 tarefas</span></div>
-            <div class="barra" role="progressbar" aria-label="Progresso do cenário" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
+            <div class="progresso-topo"><span class="conta">0 de 3 tarefas</span></div>
+            <div class="barra" role="progressbar" aria-label="Progresso" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
           </div>
 
           <div class="caixa protegido">
-            <h3><svg aria-hidden="true"><use href="#i-escudo" /></svg>O que será protegido</h3>
+            <h3><svg aria-hidden="true"><use href="#i-escudo" /></svg>O que fica protegido</h3>
             <ul class="lista-check">
-              <li><strong>Chrome:</strong> bloqueia sites explícitos</li>
-              <li><strong>Busca do Google:</strong> SafeSearch travado</li>
-              <li><strong>Play Store:</strong> classificação por idade e sua aprovação para cada download</li>
-              <li><strong>YouTube:</strong> só conteúdo que você aprovou</li>
+              <li><strong>Chrome:</strong> sites explícitos bloqueados</li>
+              <li><strong>Busca do Google:</strong> filtro de conteúdo travado</li>
+              <li><strong>Play Store:</strong> só com a sua aprovação</li>
+              <li><strong>YouTube:</strong> só o que você aprovar</li>
             </ul>
           </div>
 
@@ -494,20 +384,15 @@
             <article class="tarefa" data-id="c3-t1">
               <div class="tarefa-topo">
                 <span class="tarefa-num">1</span>
-                <div>
-                  <h3>Ligar o celular da criança ao Family Link</h3>
-                  <p class="sub">No Android da criança</p>
-                </div>
+                <h3>Ligar ao Family Link</h3>
               </div>
               <div class="tarefa-corpo">
-                <div class="video" data-video-id="" data-titulo="Ligar o celular da criança ao Family Link"></div>
+                <div class="video" data-video-id="" data-titulo="Ligar ao Family Link"></div>
                 <div>
-                  <p class="caminho">Onde fica</p>
                   <div class="trilha"><span>Configurações</span><i>›</i><span>Google</span><i>›</i><span>Controles da família</span></div>
                   <ol class="passos">
-                    <li>Toque em <strong>Vamos começar</strong>.</li>
-                    <li>Siga as telas para ligar a conta Google da criança ao seu grupo familiar.</li>
-                    <li>No seu celular, instale o app <strong>Family Link</strong> e confirme a ligação.</li>
+                    <li>No celular da criança, toque em <strong>Vamos começar</strong> e siga as telas.</li>
+                    <li>No seu celular, instale o <strong>Family Link</strong> e confirme.</li>
                   </ol>
                   <button class="btn-feito" type="button" aria-pressed="false">
                     <svg aria-hidden="true"><use href="#i-check" /></svg><span class="txt">Marcar como feito</span>
@@ -519,20 +404,15 @@
             <article class="tarefa" data-id="c3-t2">
               <div class="tarefa-topo">
                 <span class="tarefa-num">2</span>
-                <div>
-                  <h3>Filtrar o Chrome, a busca e a Play Store</h3>
-                  <p class="sub">No seu celular, pelo app Family Link</p>
-                </div>
+                <h3>Filtrar o Chrome e a Play Store</h3>
               </div>
               <div class="tarefa-corpo">
-                <div class="video" data-video-id="" data-titulo="Filtrar o Chrome, a busca e a Play Store"></div>
+                <div class="video" data-video-id="" data-titulo="Filtrar o Chrome e a Play Store"></div>
                 <div>
-                  <p class="caminho">Onde fica</p>
-                  <div class="trilha"><span>Family Link</span><i>›</i><span>[nome da criança]</span><i>›</i><span>Controles</span></div>
+                  <div class="trilha"><span>Family Link</span><i>›</i><span>Controles</span></div>
                   <ol class="passos">
-                    <li>Em <strong>Chrome e Web</strong>, escolha <strong>Tentar bloquear sites explícitos</strong>. Se preferir mais controle, use <strong>Aprovar apenas sites específicos</strong>.</li>
-                    <li>O <strong>SafeSearch</strong> já vem ligado e travado em contas supervisionadas. Só você consegue desligar.</li>
-                    <li>Em <strong>Google Play</strong>, defina a classificação máxima pela idade e ative a <strong>aprovação obrigatória</strong> para downloads.</li>
+                    <li>Em <strong>Chrome e Web</strong>, escolha <strong>Tentar bloquear sites explícitos</strong>.</li>
+                    <li>Em <strong>Google Play</strong>, defina a idade máxima e ative a <strong>aprovação para downloads</strong>.</li>
                   </ol>
                   <button class="btn-feito" type="button" aria-pressed="false">
                     <svg aria-hidden="true"><use href="#i-check" /></svg><span class="txt">Marcar como feito</span>
@@ -544,30 +424,21 @@
             <article class="tarefa" data-id="c3-t3">
               <div class="tarefa-topo">
                 <span class="tarefa-num">3</span>
-                <div>
-                  <h3>Configurar o YouTube Kids</h3>
-                  <p class="sub">Recomendado para crianças de 5 a 8 anos</p>
-                </div>
+                <h3>Configurar o YouTube Kids</h3>
               </div>
               <div class="tarefa-corpo">
                 <div class="video" data-video-id="" data-titulo="Configurar o YouTube Kids no Android"></div>
                 <div>
-                  <p class="caminho">Onde fica</p>
-                  <div class="trilha"><span>App YouTube Kids</span><i>›</i><span>Cadeado</span><i>›</i><span>Configurações</span></div>
+                  <div class="trilha"><span>YouTube Kids</span><i>›</i><span>Cadeado</span><i>›</i><span>Configurações</span></div>
                   <ol class="passos">
-                    <li>Baixe o <strong>YouTube Kids</strong> e crie o perfil da criança ligado à sua conta Google.</li>
-                    <li>Escolha o nível de conteúdo: <strong>Pré-escolar</strong> ou <strong>Crianças menores</strong>.</li>
-                    <li>Toque no <strong>cadeado</strong> no rodapé e confirme com a senha da sua conta.</li>
+                    <li>Crie o perfil da criança e escolha o nível <strong>Pré-escolar</strong> ou <strong>Crianças menores</strong>.</li>
                     <li>Ative <strong>Somente Conteúdo Aprovado</strong>.</li>
-                    <li>Vá em <strong>Conteúdo Aprovado</strong>, toque em <strong>+</strong> e adicione os canais e vídeos que você conhece e confia.</li>
+                    <li>Em <strong>Conteúdo Aprovado</strong>, toque em <strong>+</strong> e adicione os canais que você confia.</li>
                   </ol>
                   <div class="aviso">
                     <svg aria-hidden="true"><use href="#i-alerta" /></svg>
-                    <span>Não pule o último passo. Sem canais aprovados, a lista fica vazia e a criança não vê nada.</span>
+                    <span>Sem canais aprovados, a criança não vê nada.</span>
                   </div>
-                  <p class="sub" style="margin-top: 12px">
-                    Se a criança usa o YouTube comum: toque no perfil › Configurações › ative o <strong>Modo Restrito</strong>.
-                  </p>
                   <button class="btn-feito" type="button" aria-pressed="false">
                     <svg aria-hidden="true"><use href="#i-check" /></svg><span class="txt">Marcar como feito</span>
                   </button>
@@ -578,55 +449,45 @@
 
           <div class="caixa checklist">
             <h3><svg aria-hidden="true"><use href="#i-lista" /></svg>Teste se funcionou</h3>
-            <p>Leva 2 minutos. Marque cada teste depois de fazer.</p>
-            <label class="teste"><input type="checkbox" data-id="c3-c1" /><span>Abra o Chrome e pesquise um termo adulto. A página deve ser bloqueada.</span></label>
-            <label class="teste"><input type="checkbox" data-id="c3-c2" /><span>Abra o YouTube e confira se só aparece conteúdo aprovado ou restrito.</span></label>
-            <label class="teste"><input type="checkbox" data-id="c3-c3" /><span>Tente baixar na Play Store um app para maiores. Deve pedir a sua aprovação.</span></label>
+            <label class="teste"><input type="checkbox" data-id="c3-c1" /><span>Pesquise um termo adulto no Chrome. Deve bloquear.</span></label>
+            <label class="teste"><input type="checkbox" data-id="c3-c2" /><span>Abra o YouTube. Só deve aparecer conteúdo aprovado.</span></label>
+            <label class="teste"><input type="checkbox" data-id="c3-c3" /><span>Tente baixar um app para maiores. Deve pedir sua aprovação.</span></label>
           </div>
 
           <div class="caixa conversa">
             <h3><svg aria-hidden="true"><use href="#i-conversa" /></svg>O que isso não resolve sozinho</h3>
-            <p>Nenhum filtro é 100% infalível. A configuração reduz muito o risco, mas não substitui a conversa. Uma frase simples já abre o caminho:</p>
-            <p class="fala">“Se um dia aparecer alguma coisa estranha na tela, você não fez nada de errado. É só me mostrar, tá?”</p>
+            <p>Nenhum filtro é 100% infalível. Combine com a criança:</p>
+            <p class="fala">“Se aparecer alguma coisa estranha na tela, você não fez nada de errado. É só me mostrar.”</p>
           </div>
 
           <div class="parabens" role="status">
             <h3>Android protegido!</h3>
-            <p>Você concluiu todas as tarefas deste cenário.</p>
           </div>
 
           <div class="proximo">
             <a class="btn" href="#extras">Ver proteções extras<svg aria-hidden="true"><use href="#i-direita" /></svg></a>
-            <p>Opcional: reforça a proteção em assistentes de voz, apps de IA e mais.</p>
           </div>
         </div>
       </section>
 
-      <!-- ======================================================
-           CENÁRIO 4 — Android dos pais emprestado
-           ====================================================== -->
+      <!-- CENÁRIO 4 — Android dos pais emprestado -->
       <section class="cenario" id="android-emprestado" aria-labelledby="t-c4">
         <div class="container">
           <div class="cenario-cabecalho">
-            <a class="voltar" href="#escolha"><svg aria-hidden="true"><use href="#i-voltar" /></svg>Trocar de cenário</a>
-            <p class="rotulo">Cenário 4 · Android</p>
-            <h2 id="t-c4">A criança usa o seu Android de vez em quando</h2>
-            <div class="chips">
-              <span class="chip"><svg aria-hidden="true"><use href="#i-relogio" /></svg>5 minutos</span>
-              <span class="chip"><svg aria-hidden="true"><use href="#i-video" /></svg>2 vídeos</span>
-            </div>
+            <p class="rotulo">Android</p>
+            <h2 id="t-c4">Celular ou tablet dos pais emprestado</h2>
           </div>
 
           <div class="progresso">
-            <div class="progresso-topo"><span>Seu progresso</span><span class="conta">0 de 2 tarefas</span></div>
-            <div class="barra" role="progressbar" aria-label="Progresso do cenário" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
+            <div class="progresso-topo"><span class="conta">0 de 2 tarefas</span></div>
+            <div class="barra" role="progressbar" aria-label="Progresso" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
           </div>
 
           <div class="caixa protegido">
-            <h3><svg aria-hidden="true"><use href="#i-escudo" /></svg>O que será protegido</h3>
+            <h3><svg aria-hidden="true"><use href="#i-escudo" /></svg>O que fica protegido</h3>
             <ul class="lista-check">
-              <li><strong>No celular:</strong> a criança fica travada dentro de um único app.</li>
-              <li><strong>No tablet:</strong> a criança usa um espaço infantil com conteúdo escolhido.</li>
+              <li><strong>Celular:</strong> a criança fica presa em um único app</li>
+              <li><strong>Tablet:</strong> um espaço infantil só com o que você escolher</li>
             </ul>
           </div>
 
@@ -634,25 +495,20 @@
             <article class="tarefa" data-id="c4-t1">
               <div class="tarefa-topo">
                 <span class="tarefa-num">1</span>
-                <div>
-                  <h3>Fixar um app na tela</h3>
-                  <p class="sub"><span class="plataforma">Celular</span>No seu Android</p>
-                </div>
+                <h3><span class="plataforma">Celular</span>Fixar um app na tela</h3>
               </div>
               <div class="tarefa-corpo">
-                <div class="video" data-video-id="" data-titulo="Fixar um app na tela do Android"></div>
+                <div class="video" data-video-id="" data-titulo="Fixar um app na tela"></div>
                 <div>
-                  <p class="caminho">Onde fica</p>
                   <div class="trilha"><span>Configurações</span><i>›</i><span>Segurança</span><i>›</i><span>Fixar app</span></div>
                   <ol class="passos">
-                    <li>Ative <strong>Fixar app</strong> (em alguns aparelhos o nome é <strong>Fixação de tela</strong>). Ligue também a opção de pedir o PIN para desafixar.</li>
-                    <li>Abra o app que a criança vai usar (ex.: YouTube Kids já configurado).</li>
-                    <li>Abra os <strong>apps recentes</strong>, toque no ícone do app e escolha <strong>Fixar</strong>.</li>
-                    <li>Para desafixar, segure <strong>Voltar</strong> e <strong>apps recentes</strong> juntos e digite o PIN.</li>
+                    <li>Ative <strong>Fixar app</strong> e a opção de pedir o PIN para desafixar.</li>
+                    <li>Abra o app, vá em <strong>apps recentes</strong>, toque no ícone dele e em <strong>Fixar</strong>.</li>
+                    <li>Para sair: segure <strong>Voltar</strong> + <strong>apps recentes</strong> e digite o PIN.</li>
                   </ol>
                   <div class="aviso">
                     <svg aria-hidden="true"><use href="#i-alerta" /></svg>
-                    <span>O nome do menu e o gesto de “apps recentes” mudam conforme a marca do celular. Se não achar, procure “fixar” na busca das Configurações.</span>
+                    <span>Não achou? Busque “fixar” nas Configurações.</span>
                   </div>
                   <button class="btn-feito" type="button" aria-pressed="false">
                     <svg aria-hidden="true"><use href="#i-check" /></svg><span class="txt">Marcar como feito</span>
@@ -664,18 +520,14 @@
             <article class="tarefa" data-id="c4-t2">
               <div class="tarefa-topo">
                 <span class="tarefa-num">2</span>
-                <div>
-                  <h3>Ativar o Google Kids Space</h3>
-                  <p class="sub"><span class="plataforma">Tablet</span>Só em tablets compatíveis</p>
-                </div>
+                <h3><span class="plataforma">Tablet</span>Ativar o Google Kids Space</h3>
               </div>
               <div class="tarefa-corpo">
-                <div class="video" data-video-id="" data-titulo="Ativar o Google Kids Space no tablet"></div>
+                <div class="video" data-video-id="" data-titulo="Ativar o Google Kids Space"></div>
                 <div>
                   <ol class="passos">
-                    <li>Ative o <strong>Kids Space</strong> no tablet e escolha a conta da criança.</li>
-                    <li>Selecione os apps, livros e vídeos que ela pode acessar.</li>
-                    <li>O Kids Space é gerenciado pelo Family Link, então os limites valem também por lá.</li>
+                    <li>Ative o <strong>Kids Space</strong> e escolha a conta da criança.</li>
+                    <li>Selecione os apps, livros e vídeos liberados.</li>
                   </ol>
                   <button class="btn-feito" type="button" aria-pressed="false">
                     <svg aria-hidden="true"><use href="#i-check" /></svg><span class="txt">Marcar como feito</span>
@@ -687,83 +539,51 @@
 
           <div class="caixa checklist">
             <h3><svg aria-hidden="true"><use href="#i-lista" /></svg>Teste se funcionou</h3>
-            <p>Marque cada teste depois de fazer.</p>
             <label class="teste"><input type="checkbox" data-id="c4-c1" /><span>Com o app fixado, tente trocar de app. Não deve sair sem o PIN.</span></label>
-            <label class="teste"><input type="checkbox" data-id="c4-c2" /><span>Confira se o app escolhido já está com o conteúdo filtrado.</span></label>
           </div>
 
           <div class="caixa conversa">
             <h3><svg aria-hidden="true"><use href="#i-conversa" /></svg>O que isso não resolve sozinho</h3>
-            <p>Fixar o app trava a troca de app, mas não filtra o conteúdo dentro dele. Escolha e configure bem o app antes de fixar.</p>
+            <p>Fixar o app não filtra o que aparece dentro dele. Use um app já configurado, como o YouTube Kids.</p>
           </div>
 
           <div class="parabens" role="status">
             <h3>Pronto para emprestar!</h3>
-            <p>Você concluiu todas as tarefas deste cenário.</p>
           </div>
 
           <div class="proximo">
             <a class="btn" href="#extras">Ver proteções extras<svg aria-hidden="true"><use href="#i-direita" /></svg></a>
-            <p>Opcional: reforça a proteção em assistentes de voz, apps de IA e mais.</p>
           </div>
         </div>
       </section>
 
-      <!-- ======================================================
-           PROTEÇÕES EXTRAS
-           ====================================================== -->
+      <!-- PROTEÇÕES EXTRAS -->
       <section class="cenario" id="extras" aria-labelledby="t-ex">
         <div class="container">
           <div class="cenario-cabecalho">
-            <a class="voltar" href="#escolha"><svg aria-hidden="true"><use href="#i-voltar" /></svg>Voltar aos cenários</a>
-            <p class="rotulo">Opcional · vale para todos</p>
+            <p class="rotulo">Opcional</p>
             <h2 id="t-ex">Proteções extras</h2>
-            <div class="chips">
-              <span class="chip"><svg aria-hidden="true"><use href="#i-relogio" /></svg>15–20 minutos</span>
-              <span class="chip"><svg aria-hidden="true"><use href="#i-video" /></svg>6 vídeos</span>
-            </div>
           </div>
 
           <div class="progresso">
-            <div class="progresso-topo"><span>Seu progresso</span><span class="conta">0 de 6 tarefas</span></div>
-            <div class="barra" role="progressbar" aria-label="Progresso das proteções extras" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
+            <div class="progresso-topo"><span class="conta">0 de 6 tarefas</span></div>
+            <div class="barra" role="progressbar" aria-label="Progresso" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
           </div>
 
-          <div class="caixa protegido">
-            <h3><svg aria-hidden="true"><use href="#i-escudo" /></svg>O que será protegido</h3>
-            <ul class="lista-check">
-              <li><strong>Internet do Android:</strong> filtro de sites no Wi-Fi e nos dados móveis</li>
-              <li><strong>Apps novos:</strong> a criança não consegue instalar outro navegador para fugir do filtro</li>
-              <li><strong>Assistentes de voz:</strong> Alexa e Google Assistente em modo infantil</li>
-              <li><strong>Apps de IA e de “personagem”:</strong> bloqueados</li>
-              <li><strong>TikTok e Pinterest:</strong> buscas e navegador embutido fora do filtro</li>
-            </ul>
-          </div>
-
-          <h3 class="tarefas-titulo">Fechar as portas de fuga</h3>
           <div class="tarefas">
             <article class="tarefa" data-id="ex-t1">
               <div class="tarefa-topo">
                 <span class="tarefa-num">1</span>
-                <div>
-                  <h3>Ativar o DNS Privado com filtro</h3>
-                  <p class="sub"><span class="plataforma">Android</span>No aparelho da criança</p>
-                </div>
+                <h3><span class="plataforma">Android</span>Filtrar a internet com DNS Privado</h3>
               </div>
               <div class="tarefa-corpo">
-                <div class="video" data-video-id="" data-titulo="Ativar o DNS Privado com filtro no Android"></div>
+                <div class="video" data-video-id="" data-titulo="Filtrar a internet com DNS Privado"></div>
                 <div>
-                  <p class="caminho">Onde fica</p>
                   <div class="trilha"><span>Configurações</span><i>›</i><span>Rede</span><i>›</i><span>DNS Privado</span></div>
                   <ol class="passos">
                     <li>Escolha <strong>Nome do host do provedor de DNS privado</strong>.</li>
-                    <li>Digite exatamente: <strong>family-filter-dns.cleanbrowsing.org</strong></li>
-                    <li>Toque em <strong>Salvar</strong>. O filtro passa a valer no Wi-Fi e nos dados móveis.</li>
+                    <li>Digite <strong>family-filter-dns.cleanbrowsing.org</strong> e salve.</li>
                   </ol>
-                  <div class="aviso">
-                    <svg aria-hidden="true"><use href="#i-info" /></svg>
-                    <span>O DNS filtra sites inteiros. Ele não impede VPNs nem conteúdo impróprio dentro de um site permitido. É um reforço, não a proteção principal.</span>
-                  </div>
                   <button class="btn-feito" type="button" aria-pressed="false">
                     <svg aria-hidden="true"><use href="#i-check" /></svg><span class="txt">Marcar como feito</span>
                   </button>
@@ -774,19 +594,15 @@
             <article class="tarefa" data-id="ex-t2">
               <div class="tarefa-topo">
                 <span class="tarefa-num">2</span>
-                <div>
-                  <h3>Impedir a instalação de apps novos</h3>
-                  <p class="sub"><span class="plataforma">Android</span>No aparelho da criança e no Family Link</p>
-                </div>
+                <h3><span class="plataforma">Android</span>Bloquear apps de fora da loja</h3>
               </div>
               <div class="tarefa-corpo">
-                <div class="video" data-video-id="" data-titulo="Impedir a instalação de apps novos no Android"></div>
+                <div class="video" data-video-id="" data-titulo="Bloquear apps de fora da loja"></div>
                 <div>
-                  <p class="caminho">Onde fica</p>
                   <div class="trilha"><span>Configurações</span><i>›</i><span>Apps</span><i>›</i><span>Acesso especial</span></div>
                   <ol class="passos">
-                    <li>Em <strong>Instalar apps desconhecidos</strong>, deixe <strong>desativado</strong> para todos os apps.</li>
-                    <li>No Family Link: <strong>Google Play</strong> › <strong>Aprovação necessária para</strong> › <strong>Todo o conteúdo</strong>.</li>
+                    <li>Em <strong>Instalar apps desconhecidos</strong>, desative todos.</li>
+                    <li>No Family Link: <strong>Google Play › Aprovação necessária para › Todo o conteúdo</strong>.</li>
                   </ol>
                   <button class="btn-feito" type="button" aria-pressed="false">
                     <svg aria-hidden="true"><use href="#i-check" /></svg><span class="txt">Marcar como feito</span>
@@ -798,18 +614,13 @@
             <article class="tarefa" data-id="ex-t3">
               <div class="tarefa-topo">
                 <span class="tarefa-num">3</span>
-                <div>
-                  <h3>Impedir a instalação de apps novos</h3>
-                  <p class="sub"><span class="plataforma">iPhone</span>No iPhone da criança</p>
-                </div>
+                <h3><span class="plataforma">iPhone</span>Bloquear a instalação de apps</h3>
               </div>
               <div class="tarefa-corpo">
-                <div class="video" data-video-id="" data-titulo="Impedir a instalação de apps novos no iPhone"></div>
+                <div class="video" data-video-id="" data-titulo="Bloquear a instalação de apps"></div>
                 <div>
-                  <p class="caminho">Onde fica</p>
-                  <div class="trilha"><span>Ajustes</span><i>›</i><span>Tempo de Uso</span><i>›</i><span>Restrições de Conteúdo e Privacidade</span></div>
+                  <div class="trilha"><span>Restrições de Conteúdo e Privacidade</span><i>›</i><span>Compras no iTunes e App Store</span></div>
                   <ol class="passos">
-                    <li>Entre em <strong>Compras no iTunes e App Store</strong>.</li>
                     <li>Em <strong>Instalar Apps</strong>, escolha <strong>Não Permitir</strong>.</li>
                   </ol>
                   <button class="btn-feito" type="button" aria-pressed="false">
@@ -818,25 +629,18 @@
                 </div>
               </div>
             </article>
-          </div>
 
-          <h3 class="tarefas-titulo">Apps e assistentes</h3>
-          <div class="tarefas">
             <article class="tarefa" data-id="ex-t4">
               <div class="tarefa-topo">
                 <span class="tarefa-num">4</span>
-                <div>
-                  <h3>Colocar os assistentes de voz em modo infantil</h3>
-                  <p class="sub"><span class="plataforma">Alexa</span><span class="plataforma">Google</span></p>
-                </div>
+                <h3>Modo infantil na Alexa e no Google Assistente</h3>
               </div>
               <div class="tarefa-corpo">
                 <div class="video" data-video-id="" data-titulo="Modo infantil nos assistentes de voz"></div>
                 <div>
-                  <p>Alexa e Google Assistente respondem a buscas por voz sem filtro e podem tocar músicas explícitas.</p>
-                  <ol class="passos" style="margin-top: 14px">
-                    <li><strong>Alexa:</strong> ative o <strong>Modo Infantil (Amazon Kids)</strong> no app Alexa.</li>
-                    <li><strong>Google Assistente:</strong> ajuste os controles pelo <strong>Family Link</strong>.</li>
+                  <ol class="passos">
+                    <li><strong>Alexa:</strong> no app Alexa, ative o <strong>Amazon Kids</strong>.</li>
+                    <li><strong>Google Assistente:</strong> ajuste pelo <strong>Family Link</strong>.</li>
                   </ol>
                   <button class="btn-feito" type="button" aria-pressed="false">
                     <svg aria-hidden="true"><use href="#i-check" /></svg><span class="txt">Marcar como feito</span>
@@ -848,22 +652,17 @@
             <article class="tarefa" data-id="ex-t5">
               <div class="tarefa-topo">
                 <span class="tarefa-num">5</span>
-                <div>
-                  <h3>Bloquear apps de IA de “personagem”</h3>
-                  <p class="sub"><span class="plataforma">iPhone</span><span class="plataforma">Android</span></p>
-                </div>
+                <h3>Bloquear apps de IA de “personagem”</h3>
               </div>
               <div class="tarefa-corpo">
                 <div class="video" data-video-id="" data-titulo="Bloquear apps de IA de personagem"></div>
                 <div>
-                  <p>O maior risco não é o ChatGPT. São os apps de “personagem” ou “namorado(a) virtual”, como Character.AI e Talkie: conversa aberta, sem filtro e sem verificação de idade confiável.</p>
-                  <ol class="passos" style="margin-top: 14px">
-                    <li>Bloqueie esses apps pelo <strong>Tempo de Uso</strong> (iPhone) ou pelo <strong>Family Link</strong> (Android).</li>
-                    <li>Com a aprovação de downloads ligada, a criança também não consegue instalá-los sem você.</li>
+                  <ol class="passos">
+                    <li>Bloqueie <strong>Character.AI</strong>, <strong>Talkie</strong> e similares pelo Tempo de Uso (iPhone) ou Family Link (Android).</li>
                   </ol>
                   <div class="aviso">
                     <svg aria-hidden="true"><use href="#i-info" /></svg>
-                    <span>A Meta AI, dentro do WhatsApp e do Instagram, vem ativada no Brasil e hoje não pode ser desligada sozinha. A única proteção real é controlar o acesso a esses apps.</span>
+                    <span>A Meta AI, dentro do WhatsApp e do Instagram, não pode ser desligada sozinha. A saída é controlar o acesso a esses apps.</span>
                   </div>
                   <button class="btn-feito" type="button" aria-pressed="false">
                     <svg aria-hidden="true"><use href="#i-check" /></svg><span class="txt">Marcar como feito</span>
@@ -875,18 +674,13 @@
             <article class="tarefa" data-id="ex-t6">
               <div class="tarefa-topo">
                 <span class="tarefa-num">6</span>
-                <div>
-                  <h3>Cuidar do TikTok e do Pinterest</h3>
-                  <p class="sub"><span class="plataforma">iPhone</span><span class="plataforma">Android</span></p>
-                </div>
+                <h3>Bloquear TikTok e Pinterest</h3>
               </div>
               <div class="tarefa-corpo">
-                <div class="video" data-video-id="" data-titulo="Cuidar do TikTok e do Pinterest"></div>
+                <div class="video" data-video-id="" data-titulo="Bloquear TikTok e Pinterest"></div>
                 <div>
-                  <p>Esses apps têm busca de vídeos e imagens e um navegador próprio, que ficam fora do filtro do Safari e do Chrome.</p>
-                  <ol class="passos" style="margin-top: 14px">
-                    <li>Bloqueie os dois pelo mesmo caminho da tarefa anterior.</li>
-                    <li>Ou confirme que eles não estão entre os apps que a criança usa.</li>
+                  <ol class="passos">
+                    <li>Eles têm busca e navegador próprios, fora do filtro. Bloqueie pelo Tempo de Uso ou Family Link.</li>
                   </ol>
                   <button class="btn-feito" type="button" aria-pressed="false">
                     <svg aria-hidden="true"><use href="#i-check" /></svg><span class="txt">Marcar como feito</span>
@@ -898,26 +692,22 @@
 
           <div class="parabens" role="status">
             <h3>Proteção reforçada!</h3>
-            <p>Você concluiu todas as proteções extras.</p>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- ======================================================
-         Rodapé
-         ====================================================== -->
+    <!-- Rodapé -->
     <footer class="rodape">
       <div class="container">
         <a class="marca" href="#inicio">
           <svg aria-hidden="true"><use href="#i-marca" /></svg>
           <span>Proteção Digital da Família</span>
         </a>
-        <p>Guia atualizado em outubro de 2026.</p>
-        <p>Ficou com dúvida em algum passo? <a href="#">Fale com a gente</a></p>
+        <p>Dúvidas? <a href="#">Fale com a gente</a></p>
       </div>
     </footer>
 
-    <script src="app.js?v=1"></script>
+    <script src="app.js?v=2"></script>
   </body>
 </html>
