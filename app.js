@@ -91,7 +91,6 @@
       );
     });
     document.body.classList.add("tem-cenario");
-    gravar("cenario", id);
 
     if (rolar) {
       window.requestAnimationFrame(function () {
@@ -177,11 +176,9 @@
   montarVideos();
   montarTarefas();
 
+  // Nenhum cenário abre sozinho: o pai sempre escolhe o dele primeiro.
   if (secaoPorId(window.location.hash.replace("#", ""))) {
     aoMudarHash(true);
-  } else {
-    var salvo = ler("cenario");
-    if (secaoPorId(salvo)) ativar(salvo, false);
   }
 
   window.addEventListener("hashchange", function () {
