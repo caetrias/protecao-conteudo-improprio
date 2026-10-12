@@ -42,7 +42,7 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
-  scroll-padding-top: 76px;
+  scroll-padding-top: 72px;
 }
 @media (min-width: 768px) {
   html {
@@ -100,57 +100,6 @@ button {
   white-space: nowrap;
 }
 
-/* ---------- Topo ---------- */
-
-.topo {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--borda);
-}
-.topo .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  height: 60px;
-}
-.marca {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  color: var(--rosa);
-}
-.marca svg {
-  width: 30px;
-  height: 30px;
-  flex-shrink: 0;
-}
-.marca span {
-  font-family: "Quicksand", sans-serif;
-  font-weight: 700;
-  font-size: 0.95rem;
-  line-height: 1.15;
-}
-.topo-link {
-  display: none;
-  font-size: 0.875rem;
-  font-weight: 600;
-  text-decoration: none;
-  color: var(--rosa-escuro);
-  background: var(--rosa-claro);
-  padding: 7px 14px;
-  border-radius: 999px;
-  white-space: nowrap;
-}
-.tem-cenario .topo-link {
-  display: inline-block;
-}
-
 /* ---------- Abertura ---------- */
 
 .abertura {
@@ -159,7 +108,7 @@ button {
   text-align: center;
 }
 .abertura h1 {
-  font-size: 1.875rem;
+  font-size: 1.75rem;
   font-weight: 700;
   color: var(--texto);
 }
@@ -360,6 +309,21 @@ button {
 .cenario-cabecalho {
   padding: 28px 0 8px;
 }
+.voltar {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--rosa-escuro);
+  margin-bottom: 12px;
+}
+.voltar svg {
+  width: 18px;
+  height: 18px;
+}
+
 .cenario-cabecalho .rotulo {
   font-size: 0.875rem;
   font-weight: 600;
@@ -376,7 +340,7 @@ button {
 /* Barra de progresso */
 .progresso {
   position: sticky;
-  top: 60px;
+  top: env(safe-area-inset-top, 0px);
   z-index: 10;
   background: var(--branco);
   padding: 12px 0;
@@ -467,6 +431,50 @@ button {
 }
 .lista-check strong {
   font-weight: 600;
+}
+
+/* Índice de vídeos do cenário */
+.indice {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 4px;
+}
+.indice a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 6px;
+  border-radius: var(--raio-sm);
+  text-decoration: none;
+  color: var(--texto);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.indice a:hover {
+  background: var(--branco);
+}
+.ind-num {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 9px;
+  background: var(--rosa);
+  color: var(--branco);
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  display: grid;
+  place-items: center;
+  transition: background 0.3s ease;
+}
+.indice a.feita .ind-num {
+  background: var(--verde);
+}
+.indice a.feita > span:last-child {
+  color: var(--texto-suave);
 }
 
 /* ---------- Tarefa (vídeo) ---------- */
@@ -829,10 +837,6 @@ button {
   color: var(--branco);
   padding: 32px 0;
   text-align: center;
-}
-.rodape .marca {
-  color: var(--branco);
-  justify-content: center;
 }
 .rodape p {
   font-size: 0.875rem;

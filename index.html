@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex, nofollow" />
     <meta name="theme-color" content="#E34181" />
-    <title>Proteção contra conteúdo impróprio no celular | Proteção Digital da Família</title>
+    <title>Guia para Proteger Seu Filho de Conteúdos Impróprios no Celular</title>
 
     <script>
       document.documentElement.classList.add("js");
@@ -17,15 +17,11 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=3" />
+    <link rel="stylesheet" href="styles.css?v=4" />
   </head>
 
   <body>
     <svg width="0" height="0" style="position: absolute" aria-hidden="true">
-      <symbol id="i-marca" viewBox="0 0 32 32">
-        <path d="M16 2.5 4.5 6.8v8.4c0 7.3 4.9 12.6 11.5 14.8 6.6-2.2 11.5-7.5 11.5-14.8V6.8L16 2.5z" fill="currentColor" />
-        <path d="M16 22.2s-6.2-3.7-6.2-8a3.4 3.4 0 0 1 6.2-1.9 3.4 3.4 0 0 1 6.2 1.9c0 4.3-6.2 8-6.2 8z" fill="#fff" />
-      </symbol>
       <symbol id="i-celular" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <rect x="6" y="2.5" width="12" height="19" rx="2.5" /><path d="M11 18.5h2" />
       </symbol>
@@ -35,8 +31,11 @@
       <symbol id="i-escudo-mais" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M12 2.5 4 5.5v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10v-6l-8-3z" /><path d="M12 9v6M9 12h6" />
       </symbol>
-      <symbol id="i-escudo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M12 2.5 4 5.5v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10v-6l-8-3z" /><path d="m8.8 12 2.2 2.2 4.2-4.4" />
+      <symbol id="i-voltar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M15 18l-6-6 6-6" />
+      </symbol>
+      <symbol id="i-video" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="5" width="13" height="14" rx="2.5" /><path d="m16 10 5-3v10l-5-3" />
       </symbol>
       <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
         <path d="M5 12.5l4.5 4.5L19 7.5" />
@@ -61,22 +60,11 @@
       </symbol>
     </svg>
 
-    <!-- Topo -->
-    <header class="topo">
-      <div class="container">
-        <a class="marca" href="#inicio" aria-label="Proteção Digital da Família — início">
-          <svg aria-hidden="true"><use href="#i-marca" /></svg>
-          <span>Proteção Digital<br />da Família</span>
-        </a>
-        <a class="topo-link" href="#escolha">Trocar cenário</a>
-      </div>
-    </header>
-
     <main id="inicio">
       <!-- Abertura -->
       <section class="abertura">
         <div class="container">
-          <h1>Proteja o celular do seu filho contra <em>conteúdo impróprio</em></h1>
+          <h1>Guia para Proteger Seu Filho de <em>Conteúdos Impróprios</em> no Celular</h1>
         </div>
       </section>
 
@@ -157,6 +145,7 @@
       <section class="cenario" id="iphone-crianca" aria-labelledby="t-c1">
         <div class="container">
           <div class="cenario-cabecalho">
+            <a class="voltar" href="#escolha"><svg aria-hidden="true"><use href="#i-voltar" /></svg>Trocar cenário</a>
             <p class="rotulo">iPhone</p>
             <h2 id="t-c1">Celular da criança</h2>
           </div>
@@ -166,25 +155,24 @@
             <div class="barra" role="progressbar" aria-label="Progresso" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
           </div>
 
-          <div class="caixa protegido">
-            <h3><svg aria-hidden="true"><use href="#i-escudo" /></svg>O que fica protegido</h3>
-            <ul class="lista-check">
-              <li><strong>Navegadores:</strong> sites adultos bloqueados, sem aba anônima</li>
-              <li><strong>Links dentro de outros apps:</strong> também filtrados</li>
-              <li><strong>App Store:</strong> só apps da idade da criança</li>
-              <li><strong>Mensagens, FaceTime, AirDrop e Fotos:</strong> nudez desfocada</li>
-              <li><strong>YouTube:</strong> só o que você aprovar</li>
-            </ul>
-          </div>
+          <nav class="caixa protegido" aria-label="Vídeos">
+            <h3><svg aria-hidden="true"><use href="#i-video" /></svg>Passo a passo</h3>
+            <ol class="indice">
+              <li><a href="#c1-t1"><span class="ind-num">1</span><span>Configurar o iPhone como celular de criança</span></a></li>
+              <li><a href="#c1-t2"><span class="ind-num">2</span><span>Bloquear sites adultos e apps impróprios</span></a></li>
+              <li><a href="#c1-t3"><span class="ind-num">3</span><span>Desfocar nudez em mensagens e fotos</span></a></li>
+              <li><a href="#c1-t4"><span class="ind-num">4</span><span>Deixar no YouTube só vídeos aprovados</span></a></li>
+            </ol>
+          </nav>
 
           <div class="tarefas">
-            <article class="tarefa" data-id="c1-t1">
+            <article class="tarefa" id="c1-t1" data-id="c1-t1">
               <div class="tarefa-topo">
                 <span class="tarefa-num">1</span>
-                <h3>Ativar o Tempo de Uso</h3>
+                <h3>Configurar o iPhone como celular de criança</h3>
               </div>
               <div class="tarefa-corpo">
-                <div class="video" data-video-id="" data-titulo="Ativar o Tempo de Uso"></div>
+                <div class="video" data-video-id="" data-titulo="Configurar o iPhone como celular de criança"></div>
                 <div>
                   <div class="trilha"><span>Ajustes</span><i>›</i><span>Tempo de Uso</span></div>
                   <ol class="passos">
@@ -203,13 +191,13 @@
               </div>
             </article>
 
-            <article class="tarefa" data-id="c1-t2">
+            <article class="tarefa" id="c1-t2" data-id="c1-t2">
               <div class="tarefa-topo">
                 <span class="tarefa-num">2</span>
-                <h3>Bloquear sites adultos e limitar a App Store</h3>
+                <h3>Bloquear sites adultos e apps impróprios</h3>
               </div>
               <div class="tarefa-corpo">
-                <div class="video" data-video-id="" data-titulo="Bloquear sites adultos e limitar a App Store"></div>
+                <div class="video" data-video-id="" data-titulo="Bloquear sites adultos e apps impróprios"></div>
                 <div>
                   <div class="trilha"><span>Tempo de Uso</span><i>›</i><span>Restrições de Conteúdo e Privacidade</span></div>
                   <ol class="passos">
@@ -224,13 +212,13 @@
               </div>
             </article>
 
-            <article class="tarefa" data-id="c1-t3">
+            <article class="tarefa" id="c1-t3" data-id="c1-t3">
               <div class="tarefa-topo">
                 <span class="tarefa-num">3</span>
-                <h3>Conferir a Segurança na Comunicação</h3>
+                <h3>Desfocar nudez em mensagens e fotos</h3>
               </div>
               <div class="tarefa-corpo">
-                <div class="video" data-video-id="" data-titulo="Conferir a Segurança na Comunicação"></div>
+                <div class="video" data-video-id="" data-titulo="Desfocar nudez em mensagens e fotos"></div>
                 <div>
                   <div class="trilha"><span>Tempo de Uso</span><i>›</i><span>Segurança na Comunicação</span></div>
                   <ol class="passos">
@@ -243,13 +231,13 @@
               </div>
             </article>
 
-            <article class="tarefa" data-id="c1-t4">
+            <article class="tarefa" id="c1-t4" data-id="c1-t4">
               <div class="tarefa-topo">
                 <span class="tarefa-num">4</span>
-                <h3>Configurar o YouTube Kids</h3>
+                <h3>Deixar no YouTube só vídeos aprovados</h3>
               </div>
               <div class="tarefa-corpo">
-                <div class="video" data-video-id="" data-titulo="Configurar o YouTube Kids no iPhone"></div>
+                <div class="video" data-video-id="" data-titulo="Deixar no YouTube só vídeos aprovados"></div>
                 <div>
                   <div class="trilha"><span>YouTube Kids</span><i>›</i><span>Cadeado</span><i>›</i><span>Configurações</span></div>
                   <ol class="passos">
@@ -297,6 +285,7 @@
       <section class="cenario" id="iphone-emprestado" aria-labelledby="t-c2">
         <div class="container">
           <div class="cenario-cabecalho">
+            <a class="voltar" href="#escolha"><svg aria-hidden="true"><use href="#i-voltar" /></svg>Trocar cenário</a>
             <p class="rotulo">iPhone</p>
             <h2 id="t-c2">Celular dos pais emprestado</h2>
           </div>
@@ -306,21 +295,21 @@
             <div class="barra" role="progressbar" aria-label="Progresso" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
           </div>
 
-          <div class="caixa protegido">
-            <h3><svg aria-hidden="true"><use href="#i-escudo" /></svg>O que fica protegido</h3>
-            <ul class="lista-check">
-              <li>A criança fica <strong>presa em um único app</strong> e não mexe no resto do celular.</li>
-            </ul>
-          </div>
+          <nav class="caixa protegido" aria-label="Vídeos">
+            <h3><svg aria-hidden="true"><use href="#i-video" /></svg>Passo a passo</h3>
+            <ol class="indice">
+              <li><a href="#c2-t1"><span class="ind-num">1</span><span>Travar a criança em um só app</span></a></li>
+            </ol>
+          </nav>
 
           <div class="tarefas">
-            <article class="tarefa" data-id="c2-t1">
+            <article class="tarefa" id="c2-t1" data-id="c2-t1">
               <div class="tarefa-topo">
                 <span class="tarefa-num">1</span>
-                <h3>Ativar o Acesso Guiado</h3>
+                <h3>Travar a criança em um só app</h3>
               </div>
               <div class="tarefa-corpo">
-                <div class="video" data-video-id="" data-titulo="Ativar o Acesso Guiado"></div>
+                <div class="video" data-video-id="" data-titulo="Travar a criança em um só app"></div>
                 <div>
                   <div class="trilha"><span>Ajustes</span><i>›</i><span>Acessibilidade</span><i>›</i><span>Acesso Guiado</span></div>
                   <ol class="passos">
@@ -361,6 +350,7 @@
       <section class="cenario" id="android-crianca" aria-labelledby="t-c3">
         <div class="container">
           <div class="cenario-cabecalho">
+            <a class="voltar" href="#escolha"><svg aria-hidden="true"><use href="#i-voltar" /></svg>Trocar cenário</a>
             <p class="rotulo">Android</p>
             <h2 id="t-c3">Celular da criança</h2>
           </div>
@@ -370,24 +360,23 @@
             <div class="barra" role="progressbar" aria-label="Progresso" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
           </div>
 
-          <div class="caixa protegido">
-            <h3><svg aria-hidden="true"><use href="#i-escudo" /></svg>O que fica protegido</h3>
-            <ul class="lista-check">
-              <li><strong>Chrome:</strong> sites explícitos bloqueados</li>
-              <li><strong>Busca do Google:</strong> filtro de conteúdo travado</li>
-              <li><strong>Play Store:</strong> só com a sua aprovação</li>
-              <li><strong>YouTube:</strong> só o que você aprovar</li>
-            </ul>
-          </div>
+          <nav class="caixa protegido" aria-label="Vídeos">
+            <h3><svg aria-hidden="true"><use href="#i-video" /></svg>Passo a passo</h3>
+            <ol class="indice">
+              <li><a href="#c3-t1"><span class="ind-num">1</span><span>Conectar o celular da criança ao seu</span></a></li>
+              <li><a href="#c3-t2"><span class="ind-num">2</span><span>Bloquear sites adultos e apps impróprios</span></a></li>
+              <li><a href="#c3-t3"><span class="ind-num">3</span><span>Deixar no YouTube só vídeos aprovados</span></a></li>
+            </ol>
+          </nav>
 
           <div class="tarefas">
-            <article class="tarefa" data-id="c3-t1">
+            <article class="tarefa" id="c3-t1" data-id="c3-t1">
               <div class="tarefa-topo">
                 <span class="tarefa-num">1</span>
-                <h3>Ligar ao Family Link</h3>
+                <h3>Conectar o celular da criança ao seu</h3>
               </div>
               <div class="tarefa-corpo">
-                <div class="video" data-video-id="" data-titulo="Ligar ao Family Link"></div>
+                <div class="video" data-video-id="" data-titulo="Conectar o celular da criança ao seu"></div>
                 <div>
                   <div class="trilha"><span>Configurações</span><i>›</i><span>Google</span><i>›</i><span>Controles da família</span></div>
                   <ol class="passos">
@@ -401,13 +390,13 @@
               </div>
             </article>
 
-            <article class="tarefa" data-id="c3-t2">
+            <article class="tarefa" id="c3-t2" data-id="c3-t2">
               <div class="tarefa-topo">
                 <span class="tarefa-num">2</span>
-                <h3>Filtrar o Chrome e a Play Store</h3>
+                <h3>Bloquear sites adultos e apps impróprios</h3>
               </div>
               <div class="tarefa-corpo">
-                <div class="video" data-video-id="" data-titulo="Filtrar o Chrome e a Play Store"></div>
+                <div class="video" data-video-id="" data-titulo="Bloquear sites adultos e apps impróprios"></div>
                 <div>
                   <div class="trilha"><span>Family Link</span><i>›</i><span>Controles</span></div>
                   <ol class="passos">
@@ -421,13 +410,13 @@
               </div>
             </article>
 
-            <article class="tarefa" data-id="c3-t3">
+            <article class="tarefa" id="c3-t3" data-id="c3-t3">
               <div class="tarefa-topo">
                 <span class="tarefa-num">3</span>
-                <h3>Configurar o YouTube Kids</h3>
+                <h3>Deixar no YouTube só vídeos aprovados</h3>
               </div>
               <div class="tarefa-corpo">
-                <div class="video" data-video-id="" data-titulo="Configurar o YouTube Kids no Android"></div>
+                <div class="video" data-video-id="" data-titulo="Deixar no YouTube só vídeos aprovados"></div>
                 <div>
                   <div class="trilha"><span>YouTube Kids</span><i>›</i><span>Cadeado</span><i>›</i><span>Configurações</span></div>
                   <ol class="passos">
@@ -474,6 +463,7 @@
       <section class="cenario" id="android-emprestado" aria-labelledby="t-c4">
         <div class="container">
           <div class="cenario-cabecalho">
+            <a class="voltar" href="#escolha"><svg aria-hidden="true"><use href="#i-voltar" /></svg>Trocar cenário</a>
             <p class="rotulo">Android</p>
             <h2 id="t-c4">Celular ou tablet dos pais emprestado</h2>
           </div>
@@ -483,22 +473,22 @@
             <div class="barra" role="progressbar" aria-label="Progresso" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
           </div>
 
-          <div class="caixa protegido">
-            <h3><svg aria-hidden="true"><use href="#i-escudo" /></svg>O que fica protegido</h3>
-            <ul class="lista-check">
-              <li><strong>Celular:</strong> a criança fica presa em um único app</li>
-              <li><strong>Tablet:</strong> um espaço infantil só com o que você escolher</li>
-            </ul>
-          </div>
+          <nav class="caixa protegido" aria-label="Vídeos">
+            <h3><svg aria-hidden="true"><use href="#i-video" /></svg>Passo a passo</h3>
+            <ol class="indice">
+              <li><a href="#c4-t1"><span class="ind-num">1</span><span><span class="plataforma">Celular</span>Travar a criança em um só app</span></a></li>
+              <li><a href="#c4-t2"><span class="ind-num">2</span><span><span class="plataforma">Tablet</span>Criar um espaço infantil no tablet</span></a></li>
+            </ol>
+          </nav>
 
           <div class="tarefas">
-            <article class="tarefa" data-id="c4-t1">
+            <article class="tarefa" id="c4-t1" data-id="c4-t1">
               <div class="tarefa-topo">
                 <span class="tarefa-num">1</span>
-                <h3><span class="plataforma">Celular</span>Fixar um app na tela</h3>
+                <h3><span class="plataforma">Celular</span>Travar a criança em um só app</h3>
               </div>
               <div class="tarefa-corpo">
-                <div class="video" data-video-id="" data-titulo="Fixar um app na tela"></div>
+                <div class="video" data-video-id="" data-titulo="Travar a criança em um só app"></div>
                 <div>
                   <div class="trilha"><span>Configurações</span><i>›</i><span>Segurança</span><i>›</i><span>Fixar app</span></div>
                   <ol class="passos">
@@ -517,13 +507,13 @@
               </div>
             </article>
 
-            <article class="tarefa" data-id="c4-t2">
+            <article class="tarefa" id="c4-t2" data-id="c4-t2">
               <div class="tarefa-topo">
                 <span class="tarefa-num">2</span>
-                <h3><span class="plataforma">Tablet</span>Ativar o Google Kids Space</h3>
+                <h3><span class="plataforma">Tablet</span>Criar um espaço infantil no tablet</h3>
               </div>
               <div class="tarefa-corpo">
-                <div class="video" data-video-id="" data-titulo="Ativar o Google Kids Space"></div>
+                <div class="video" data-video-id="" data-titulo="Criar um espaço infantil no tablet"></div>
                 <div>
                   <ol class="passos">
                     <li>Ative o <strong>Kids Space</strong> e escolha a conta da criança.</li>
@@ -561,6 +551,7 @@
       <section class="cenario" id="extras" aria-labelledby="t-ex">
         <div class="container">
           <div class="cenario-cabecalho">
+            <a class="voltar" href="#escolha"><svg aria-hidden="true"><use href="#i-voltar" /></svg>Trocar cenário</a>
             <p class="rotulo">Opcional</p>
             <h2 id="t-ex">Proteções extras</h2>
           </div>
@@ -570,14 +561,26 @@
             <div class="barra" role="progressbar" aria-label="Progresso" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
           </div>
 
+          <nav class="caixa protegido" aria-label="Vídeos">
+            <h3><svg aria-hidden="true"><use href="#i-video" /></svg>Passo a passo</h3>
+            <ol class="indice">
+              <li><a href="#ex-t1"><span class="ind-num">1</span><span><span class="plataforma">Android</span>Filtrar sites adultos na internet</span></a></li>
+              <li><a href="#ex-t2"><span class="ind-num">2</span><span><span class="plataforma">Android</span>Impedir apps de fora da loja</span></a></li>
+              <li><a href="#ex-t3"><span class="ind-num">3</span><span><span class="plataforma">iPhone</span>Impedir a instalação de novos apps</span></a></li>
+              <li><a href="#ex-t4"><span class="ind-num">4</span><span>Deixar a Alexa e o Google Assistente no modo infantil</span></a></li>
+              <li><a href="#ex-t5"><span class="ind-num">5</span><span>Bloquear apps de IA de personagem</span></a></li>
+              <li><a href="#ex-t6"><span class="ind-num">6</span><span>Bloquear TikTok e Pinterest</span></a></li>
+            </ol>
+          </nav>
+
           <div class="tarefas">
-            <article class="tarefa" data-id="ex-t1">
+            <article class="tarefa" id="ex-t1" data-id="ex-t1">
               <div class="tarefa-topo">
                 <span class="tarefa-num">1</span>
-                <h3><span class="plataforma">Android</span>Filtrar a internet com DNS Privado</h3>
+                <h3><span class="plataforma">Android</span>Filtrar sites adultos na internet</h3>
               </div>
               <div class="tarefa-corpo">
-                <div class="video" data-video-id="" data-titulo="Filtrar a internet com DNS Privado"></div>
+                <div class="video" data-video-id="" data-titulo="Filtrar sites adultos na internet"></div>
                 <div>
                   <div class="trilha"><span>Configurações</span><i>›</i><span>Rede</span><i>›</i><span>DNS Privado</span></div>
                   <ol class="passos">
@@ -591,13 +594,13 @@
               </div>
             </article>
 
-            <article class="tarefa" data-id="ex-t2">
+            <article class="tarefa" id="ex-t2" data-id="ex-t2">
               <div class="tarefa-topo">
                 <span class="tarefa-num">2</span>
-                <h3><span class="plataforma">Android</span>Bloquear apps de fora da loja</h3>
+                <h3><span class="plataforma">Android</span>Impedir apps de fora da loja</h3>
               </div>
               <div class="tarefa-corpo">
-                <div class="video" data-video-id="" data-titulo="Bloquear apps de fora da loja"></div>
+                <div class="video" data-video-id="" data-titulo="Impedir apps de fora da loja"></div>
                 <div>
                   <div class="trilha"><span>Configurações</span><i>›</i><span>Apps</span><i>›</i><span>Acesso especial</span></div>
                   <ol class="passos">
@@ -611,13 +614,13 @@
               </div>
             </article>
 
-            <article class="tarefa" data-id="ex-t3">
+            <article class="tarefa" id="ex-t3" data-id="ex-t3">
               <div class="tarefa-topo">
                 <span class="tarefa-num">3</span>
-                <h3><span class="plataforma">iPhone</span>Bloquear a instalação de apps</h3>
+                <h3><span class="plataforma">iPhone</span>Impedir a instalação de novos apps</h3>
               </div>
               <div class="tarefa-corpo">
-                <div class="video" data-video-id="" data-titulo="Bloquear a instalação de apps"></div>
+                <div class="video" data-video-id="" data-titulo="Impedir a instalação de novos apps"></div>
                 <div>
                   <div class="trilha"><span>Restrições de Conteúdo e Privacidade</span><i>›</i><span>Compras no iTunes e App Store</span></div>
                   <ol class="passos">
@@ -630,13 +633,13 @@
               </div>
             </article>
 
-            <article class="tarefa" data-id="ex-t4">
+            <article class="tarefa" id="ex-t4" data-id="ex-t4">
               <div class="tarefa-topo">
                 <span class="tarefa-num">4</span>
-                <h3>Modo infantil na Alexa e no Google Assistente</h3>
+                <h3>Deixar a Alexa e o Google Assistente no modo infantil</h3>
               </div>
               <div class="tarefa-corpo">
-                <div class="video" data-video-id="" data-titulo="Modo infantil nos assistentes de voz"></div>
+                <div class="video" data-video-id="" data-titulo="Deixar a Alexa e o Google Assistente no modo infantil"></div>
                 <div>
                   <ol class="passos">
                     <li><strong>Alexa:</strong> no app Alexa, ative o <strong>Amazon Kids</strong>.</li>
@@ -649,10 +652,10 @@
               </div>
             </article>
 
-            <article class="tarefa" data-id="ex-t5">
+            <article class="tarefa" id="ex-t5" data-id="ex-t5">
               <div class="tarefa-topo">
                 <span class="tarefa-num">5</span>
-                <h3>Bloquear apps de IA de “personagem”</h3>
+                <h3>Bloquear apps de IA de personagem</h3>
               </div>
               <div class="tarefa-corpo">
                 <div class="video" data-video-id="" data-titulo="Bloquear apps de IA de personagem"></div>
@@ -671,7 +674,7 @@
               </div>
             </article>
 
-            <article class="tarefa" data-id="ex-t6">
+            <article class="tarefa" id="ex-t6" data-id="ex-t6">
               <div class="tarefa-topo">
                 <span class="tarefa-num">6</span>
                 <h3>Bloquear TikTok e Pinterest</h3>
@@ -700,14 +703,10 @@
     <!-- Rodapé -->
     <footer class="rodape">
       <div class="container">
-        <a class="marca" href="#inicio">
-          <svg aria-hidden="true"><use href="#i-marca" /></svg>
-          <span>Proteção Digital da Família</span>
-        </a>
         <p>Dúvidas? <a href="#">Fale com a gente</a></p>
       </div>
     </footer>
 
-    <script src="app.js?v=3"></script>
+    <script src="app.js?v=4"></script>
   </body>
 </html>

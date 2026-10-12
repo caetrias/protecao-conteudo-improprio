@@ -101,7 +101,19 @@
 
   function aoMudarHash(rolar) {
     var id = decodeURIComponent(window.location.hash.replace("#", ""));
-    if (secaoPorId(id)) ativar(id, rolar);
+    if (secaoPorId(id)) {
+      ativar(id, rolar);
+      return;
+    }
+    // Link do índice para um vídeo: abre o cenário dele e rola até o vídeo
+    var el = id && document.getElementById(id);
+    var secao = el && el.closest(".cenario");
+    if (secao) {
+      ativar(secao.id, false);
+      window.requestAnimationFrame(function () {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    }
   }
 
   /* ---------- Tarefas e checklist ---------- */
@@ -134,6 +146,8 @@
   function marcarTarefa(tarefa, feita) {
     var btn = tarefa.querySelector(".btn-feito");
     tarefa.classList.toggle("feita", feita);
+    var item = document.querySelector('.indice a[href="#' + tarefa.id + '"]');
+    if (item) item.classList.toggle("feita", feita);
     if (btn) {
       btn.setAttribute("aria-pressed", feita ? "true" : "false");
       btn.querySelector(".txt").textContent = feita
@@ -177,7 +191,7 @@
   montarTarefas();
 
   // Nenhum cenário abre sozinho: o pai sempre escolhe o dele primeiro.
-  if (secaoPorId(window.location.hash.replace("#", ""))) {
+  if (window.location.hash) {
     aoMudarHash(true);
   }
 
