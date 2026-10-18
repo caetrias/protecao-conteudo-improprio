@@ -17,7 +17,7 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=5" />
+    <link rel="stylesheet" href="styles.css?v=6" />
   </head>
 
   <body>
@@ -102,45 +102,68 @@
             <h2>Qual é o seu caso?</h2>
           </div>
 
-          <nav class="cenarios" aria-label="Cenários">
-            <a class="cenario-card" href="#iphone-crianca" aria-current="false">
-              <span class="feito-tag">Concluído</span>
-              <span class="aparelho"><svg aria-hidden="true"><use href="#i-celular" /></svg></span>
-              <span class="rotulo">iPhone</span>
-              <h3>Celular da criança</h3>
-              <span class="meta">10 min · 4 vídeos</span>
-            </a>
-            <a class="cenario-card" href="#iphone-emprestado" aria-current="false">
-              <span class="feito-tag">Concluído</span>
-              <span class="aparelho"><svg aria-hidden="true"><use href="#i-emprestado" /></svg></span>
-              <span class="rotulo">iPhone</span>
-              <h3>Celular dos pais emprestado</h3>
-              <span class="meta">8 min · 2 vídeos</span>
-            </a>
-            <a class="cenario-card" href="#android-crianca" aria-current="false">
-              <span class="feito-tag">Concluído</span>
-              <span class="aparelho"><svg aria-hidden="true"><use href="#i-celular" /></svg></span>
-              <span class="rotulo">Android</span>
-              <h3>Celular da criança</h3>
-              <span class="meta">10 min · 3 vídeos</span>
-            </a>
-            <a class="cenario-card" href="#android-emprestado" aria-current="false">
-              <span class="feito-tag">Concluído</span>
-              <span class="aparelho"><svg aria-hidden="true"><use href="#i-emprestado" /></svg></span>
-              <span class="rotulo">Android</span>
-              <h3>Celular ou tablet dos pais emprestado</h3>
-              <span class="meta">10 min · 3 vídeos</span>
-            </a>
-            <a class="cenario-card extras" href="#extras" aria-current="false">
-              <span class="feito-tag">Concluído</span>
-              <span class="aparelho"><svg aria-hidden="true"><use href="#i-escudo-mais" /></svg></span>
-              <div>
-                <span class="rotulo">Opcional</span>
-                <h3>Proteções extras</h3>
-                <span class="meta">20 min · 6 vídeos</span>
+          <div class="plataformas">
+            <div class="plataforma-grupo">
+              <div class="plataforma-topo">
+                <span class="logo logo-apple" aria-hidden="true"></span>
+                <h3>iPhone</h3>
               </div>
-            </a>
-          </nav>
+              <a class="cenario-card opcao" href="#iphone-crianca" aria-current="false">
+                <span class="aparelho"><svg aria-hidden="true"><use href="#i-celular" /></svg></span>
+                <span class="opcao-texto">
+                  <strong>O celular é da criança</strong>
+                  <span class="meta">10 min · 4 vídeos</span>
+                </span>
+                <span class="feito-tag">Concluído</span>
+                <svg class="opcao-seta" aria-hidden="true"><use href="#i-direita" /></svg>
+              </a>
+              <a class="cenario-card opcao" href="#iphone-emprestado" aria-current="false">
+                <span class="aparelho"><svg aria-hidden="true"><use href="#i-emprestado" /></svg></span>
+                <span class="opcao-texto">
+                  <strong>A criança usa o meu iPhone</strong>
+                  <span class="meta">8 min · 2 vídeos</span>
+                </span>
+                <span class="feito-tag">Concluído</span>
+                <svg class="opcao-seta" aria-hidden="true"><use href="#i-direita" /></svg>
+              </a>
+            </div>
+
+            <div class="plataforma-grupo">
+              <div class="plataforma-topo">
+                <span class="logo logo-android" aria-hidden="true"></span>
+                <h3>Android</h3>
+              </div>
+              <a class="cenario-card opcao" href="#android-crianca" aria-current="false">
+                <span class="aparelho"><svg aria-hidden="true"><use href="#i-celular" /></svg></span>
+                <span class="opcao-texto">
+                  <strong>O celular é da criança</strong>
+                  <span class="meta">10 min · 3 vídeos</span>
+                </span>
+                <span class="feito-tag">Concluído</span>
+                <svg class="opcao-seta" aria-hidden="true"><use href="#i-direita" /></svg>
+              </a>
+              <a class="cenario-card opcao" href="#android-emprestado" aria-current="false">
+                <span class="aparelho"><svg aria-hidden="true"><use href="#i-emprestado" /></svg></span>
+                <span class="opcao-texto">
+                  <strong>A criança usa o meu celular ou tablet</strong>
+                  <span class="meta">10 min · 3 vídeos</span>
+                </span>
+                <span class="feito-tag">Concluído</span>
+                <svg class="opcao-seta" aria-hidden="true"><use href="#i-direita" /></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Temporariamente fora do ar: Proteções extras -->
+          <a class="cenario-card extras" href="#extras" aria-current="false" hidden>
+            <span class="feito-tag">Concluído</span>
+            <span class="aparelho"><svg aria-hidden="true"><use href="#i-escudo-mais" /></svg></span>
+            <div>
+              <span class="rotulo">Opcional</span>
+              <h3>Proteções extras</h3>
+              <span class="meta">20 min · 6 vídeos</span>
+            </div>
+          </a>
         </div>
       </section>
 
@@ -149,7 +172,7 @@
         <div class="container">
           <div class="cenario-cabecalho">
             <a class="voltar" href="#escolha"><svg aria-hidden="true"><use href="#i-voltar" /></svg>Trocar cenário</a>
-            <p class="rotulo">iPhone</p>
+            <p class="rotulo"><span class="logo logo-apple" aria-hidden="true"></span>iPhone</p>
             <h2 id="t-c1">Celular da criança</h2>
           </div>
 
@@ -283,7 +306,7 @@
             <h3>iPhone protegido!</h3>
           </div>
 
-          <div class="proximo">
+          <div class="proximo" hidden>
             <a class="btn" href="#extras">Ver proteções extras<svg aria-hidden="true"><use href="#i-direita" /></svg></a>
           </div>
         </div>
@@ -294,7 +317,7 @@
         <div class="container">
           <div class="cenario-cabecalho">
             <a class="voltar" href="#escolha"><svg aria-hidden="true"><use href="#i-voltar" /></svg>Trocar cenário</a>
-            <p class="rotulo">iPhone</p>
+            <p class="rotulo"><span class="logo logo-apple" aria-hidden="true"></span>iPhone</p>
             <h2 id="t-c2">Celular dos pais emprestado</h2>
           </div>
 
@@ -374,7 +397,7 @@
             <h3>Pronto para emprestar!</h3>
           </div>
 
-          <div class="proximo">
+          <div class="proximo" hidden>
             <a class="btn" href="#extras">Ver proteções extras<svg aria-hidden="true"><use href="#i-direita" /></svg></a>
           </div>
         </div>
@@ -385,7 +408,7 @@
         <div class="container">
           <div class="cenario-cabecalho">
             <a class="voltar" href="#escolha"><svg aria-hidden="true"><use href="#i-voltar" /></svg>Trocar cenário</a>
-            <p class="rotulo">Android</p>
+            <p class="rotulo"><span class="logo logo-android" aria-hidden="true"></span>Android</p>
             <h2 id="t-c3">Celular da criança</h2>
           </div>
 
@@ -496,7 +519,7 @@
             <h3>Android protegido!</h3>
           </div>
 
-          <div class="proximo">
+          <div class="proximo" hidden>
             <a class="btn" href="#extras">Ver proteções extras<svg aria-hidden="true"><use href="#i-direita" /></svg></a>
           </div>
         </div>
@@ -507,7 +530,7 @@
         <div class="container">
           <div class="cenario-cabecalho">
             <a class="voltar" href="#escolha"><svg aria-hidden="true"><use href="#i-voltar" /></svg>Trocar cenário</a>
-            <p class="rotulo">Android</p>
+            <p class="rotulo"><span class="logo logo-android" aria-hidden="true"></span>Android</p>
             <h2 id="t-c4">Celular ou tablet dos pais emprestado</h2>
           </div>
 
@@ -612,14 +635,14 @@
             <h3>Pronto para emprestar!</h3>
           </div>
 
-          <div class="proximo">
+          <div class="proximo" hidden>
             <a class="btn" href="#extras">Ver proteções extras<svg aria-hidden="true"><use href="#i-direita" /></svg></a>
           </div>
         </div>
       </section>
 
       <!-- PROTEÇÕES EXTRAS -->
-      <section class="cenario" id="extras" aria-labelledby="t-ex">
+      <section class="cenario" id="extras" aria-labelledby="t-ex" hidden>
         <div class="container">
           <div class="cenario-cabecalho">
             <a class="voltar" href="#escolha"><svg aria-hidden="true"><use href="#i-voltar" /></svg>Trocar cenário</a>
