@@ -156,6 +156,77 @@
     }
   }
 
+  /* ---------- Pré-requisitos ---------- */
+
+  var ICONE_CADEADO =
+    '<svg aria-hidden="true"><use href="#i-cadeado" /></svg>';
+
+  function estaFeita(id) {
+    var el = document.getElementById(id);
+    return !!(el && el.classList.contains("feita"));
+  }
+
+  function concluir(id) {
+    var el = document.getElementById(id);
+    if (!el || el.classList.contains("feita")) return;
+    marcarTarefa(el, true);
+    gravar("t:" + id, "1");
+    var secao = el.closest(".cenario");
+    if (secao) atualizarProgresso(secao);
+  }
+
+  function atualizarBloqueios() {
+    var dependentes = document.querySelectorAll(".tarefa[data-requer]");
+    Array.prototype.forEach.call(dependentes, function (tarefa) {
+      var pendentes = tarefa
+        .getAttribute("data-requer")
+        .split(" ")
+        .filter(function (id) {
+          return id && !estaFeita(id);
+        });
+      var bloqueada = pendentes.length > 0;
+      tarefa.classList.toggle("bloqueada", bloqueada);
+
+      var item = document.querySelector('.indice a[href="#' + tarefa.id + '"]');
+      if (item) item.classList.toggle("bloqueada", bloqueada);
+
+      var corpo = tarefa.querySelector(".tarefa-corpo");
+      var trava = corpo.querySelector(".trava");
+      if (!bloqueada) {
+        if (trava) trava.remove();
+        return;
+      }
+      if (!trava) {
+        trava = document.createElement("div");
+        trava.className = "trava";
+        corpo.insertBefore(trava, corpo.firstChild);
+      }
+      var links = pendentes
+        .map(function (id) {
+          var el = document.getElementById(id);
+          var nome = el ? el.getAttribute("data-nome") : id;
+          var outro = el && el.closest(".cenario") !== tarefa.closest(".cenario");
+          var onde = "";
+          if (outro) {
+            var rot = el.closest(".cenario").querySelector(".cenario-cabecalho .rotulo");
+            var tit = el.closest(".cenario").querySelector(".cenario-cabecalho h2");
+            onde = '<span class="trava-onde">' + (rot ? rot.textContent + " · " : "") + (tit ? tit.textContent : "") + "</span>";
+          }
+          return '<div><a href="#' + id + '">' + nome + "</a>" + onde + "</div>";
+        })
+        .join("");
+      trava.innerHTML =
+        '<div class="trava-ico">' + ICONE_CADEADO + "</div>" +
+        '<p class="trava-titulo">Faça antes:</p>' +
+        '<div class="trava-links">' + links + "</div>" +
+        '<button type="button" class="btn-ja-fiz">Já fiz isso</button>';
+      trava.querySelector(".btn-ja-fiz").addEventListener("click", function () {
+        pendentes.forEach(concluir);
+        atualizarBloqueios();
+      });
+    });
+  }
+
   function montarTarefas() {
     var tarefas = document.querySelectorAll(".tarefa[data-id]");
     Array.prototype.forEach.call(tarefas, function (tarefa) {
@@ -170,6 +241,7 @@
         gravar("t:" + id, feita ? "1" : null);
         var secao = tarefa.closest(".cenario");
         if (secao) atualizarProgresso(secao);
+        atualizarBloqueios();
       });
     });
 
@@ -183,6 +255,7 @@
     });
 
     Array.prototype.forEach.call(secoes, atualizarProgresso);
+    atualizarBloqueios();
   }
 
   /* ---------- Início ---------- */

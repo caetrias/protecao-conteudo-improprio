@@ -40,3 +40,13 @@ Ficam só aqui, fora do HTML, para não aparecerem para o cliente:
 | `--rosa-claro` | `#FCE4EF` | fundos de chips e caixas |
 | `--rosa-suave` | `#FFF6FA` | fundos amplos |
 | `--branco` | `#FFFFFF` | fundo da página |
+
+## Vídeos reaproveitados (mesmo ID do YouTube)
+
+- Cenário 2, tarefa 1 usa o vídeo 1.4 (YouTube Kids no iPhone) → mesmo `data-video-id` de `c1-t4`
+- Extras, tarefa 7 (TikTok e Pinterest) não tem vídeo: manda repetir o E5/E6
+
+## Pré-requisitos (bloqueio na página)
+
+Definidos por `data-requer` em cada `<article>`, seguindo os "Faça antes" do roteiro:
+c1-t2, c1-t3 ← c1-t1 · c2-t2 ← c2-t1 · c3-t2 ← c3-t1 · c4-t2 ← c4-t1 · ex-t2 ← c3-t1 · ex-t3 ← c1-t2 · ex-t5 ← c1-t1 · ex-t6 ← c3-t1

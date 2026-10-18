@@ -867,3 +867,102 @@ summary:focus-visible {
     scroll-behavior: auto !important;
   }
 }
+
+/* ---------- Tarefa sem vídeo ---------- */
+
+@media (min-width: 680px) {
+  .tarefa-corpo.sem-video {
+    grid-template-columns: 1fr;
+  }
+}
+
+.aviso.info {
+  background: var(--rosa-suave);
+  color: var(--texto);
+}
+.aviso.info svg {
+  color: var(--rosa);
+}
+
+/* ---------- Pré-requisito (vídeo bloqueado) ---------- */
+
+.tarefa.bloqueada .tarefa-corpo > :not(.trava) {
+  display: none;
+}
+.tarefa.bloqueada .tarefa-num {
+  background: #c9ccd3;
+}
+.tarefa.bloqueada .tarefa-topo h3 {
+  color: var(--texto-suave);
+}
+.tarefa-corpo.sem-video .trava,
+.tarefa-corpo .trava {
+  grid-column: 1 / -1;
+}
+
+.trava {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  padding: 22px 18px;
+  border: 2px dashed var(--borda);
+  border-radius: var(--raio);
+  background: var(--rosa-suave);
+}
+.trava-ico {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--branco);
+  display: grid;
+  place-items: center;
+  color: var(--rosa);
+  box-shadow: 0 4px 14px rgba(227, 65, 129, 0.15);
+}
+.trava-ico svg {
+  width: 24px;
+  height: 24px;
+}
+.trava-titulo {
+  font-weight: 600;
+  font-size: 1rem;
+}
+.trava-links {
+  display: grid;
+  gap: 8px;
+}
+.trava-links a {
+  font-weight: 600;
+  color: var(--rosa-escuro);
+  font-size: 1rem;
+  line-height: 1.4;
+}
+.trava-onde {
+  display: block;
+  font-size: 0.8125rem;
+  color: var(--texto-suave);
+  margin-top: 2px;
+}
+.btn-ja-fiz {
+  margin-top: 4px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--borda);
+  background: var(--branco);
+  color: var(--texto-suave);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.btn-ja-fiz:hover {
+  color: var(--rosa-escuro);
+  border-color: var(--rosa);
+}
+
+.indice a.bloqueada {
+  color: var(--texto-suave);
+}
+.indice a.bloqueada .ind-num {
+  background: #c9ccd3;
+}
