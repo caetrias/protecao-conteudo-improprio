@@ -65,7 +65,6 @@ export function paginaLogin(nomeGuia, modoTeste) {
 <main>
   <h1>${nome}</h1>
 
-  ${modoTeste ? '<p class="teste">Modo de teste: use qualquer e-mail e o código <strong>123456</strong>.</p>' : ""}
   <div class="cartao">
     <form id="passo-email">
       <h2>Entrar</h2>
@@ -78,7 +77,7 @@ export function paginaLogin(nomeGuia, modoTeste) {
 
     <form id="passo-codigo" hidden>
       <h2>Digite o código</h2>
-      <p>${modoTeste ? 'Modo de teste: digite <strong>123456</strong>.<span hidden id="email-mostrado"></span>' : 'Enviamos um código de 6 dígitos para <strong id="email-mostrado"></strong>. Confira também a caixa de spam.'}</p>
+      <p>${modoTeste ? 'Digite o código de 6 dígitos.<span hidden id="email-mostrado"></span>' : 'Enviamos um código de 6 dígitos para <strong id="email-mostrado"></strong>. Confira também a caixa de spam.'}</p>
       <label for="codigo">Código</label>
       <input id="codigo" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="6" pattern="[0-9]{6}" required />
       <button type="submit">Entrar</button>
