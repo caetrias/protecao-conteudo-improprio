@@ -1,0 +1,33 @@
+{
+  // ===== O que muda por produto =====
+  // name     → protecao-<slug>   (mesmo nome do repositório)
+  // KV       → acessos-<slug>    (crie no painel e cole o id abaixo)
+  // vars     → PRODUTO, NOME_GUIA, HOTMART_PRODUCT_ID
+  "name": "protecao-conteudo-improprio",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-09-01",
+
+  // Arquivos do guia. O Worker roda antes deles para exigir login.
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": true
+  },
+
+  // Banco deste produto: acessos-conteudo-improprio
+  "kv_namespaces": [
+    { "binding": "DB", "id": "f4d65902316e4a4b9a9dcf71df76aa7b" }
+  ],
+
+  "vars": {
+    "PRODUTO": "conteudo-improprio",
+    // Aparece na tela de login e no e-mail do código
+    "NOME_GUIA": "Guia para Proteger Seu Filho de Conteúdos Impróprios no Celular",
+    // ID do produto na Hotmart. Com ele preenchido, vendas de outros produtos são ignoradas.
+    "HOTMART_PRODUCT_ID": "",
+    // Remetente do código. onboarding@resend.dev só serve para teste; troque pelo domínio verificado no Resend.
+    "EMAIL_FROM": "Guia <onboarding@resend.dev>"
+  },
+
+  "observability": { "enabled": true }
+}
