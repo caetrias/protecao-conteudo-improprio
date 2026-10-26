@@ -1,6 +1,6 @@
 /* Tela de entrada: e-mail → código de 6 dígitos → página do guia */
 
-export function paginaLogin(nomeGuia) {
+export function paginaLogin(nomeGuia, modoTeste) {
   const nome = String(nomeGuia || "Guia").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
   return `<!doctype html>
 <html lang="pt-BR">
@@ -57,6 +57,7 @@ export function paginaLogin(nomeGuia) {
   .msg { min-height: 1.4em; margin: 10px 0 0; font-size: 0.875rem; color: var(--erro); }
   .msg.ok { color: var(--texto-suave); }
   [hidden] { display: none !important; }
+  .teste { background: #fff7ed; color: #92400e; border-radius: 12px; padding: 10px 14px; margin: 0 0 16px; font-size: 0.875rem; text-align: center; }
   .ajuda { text-align: center; margin-top: 18px; font-size: 0.8125rem; }
 </style>
 </head>
@@ -64,6 +65,7 @@ export function paginaLogin(nomeGuia) {
 <main>
   <h1>${nome}</h1>
 
+  ${modoTeste ? '<p class="teste">Modo de teste: use qualquer e-mail e o código <strong>123456</strong>.</p>' : ""}
   <div class="cartao">
     <form id="passo-email">
       <h2>Entrar</h2>
@@ -76,7 +78,7 @@ export function paginaLogin(nomeGuia) {
 
     <form id="passo-codigo" hidden>
       <h2>Digite o código</h2>
-      <p>Enviamos um código de 6 dígitos para <strong id="email-mostrado"></strong>. Confira também a caixa de spam.</p>
+      <p>${modoTeste ? 'Modo de teste: digite <strong>123456</strong>.<span hidden id="email-mostrado"></span>' : 'Enviamos um código de 6 dígitos para <strong id="email-mostrado"></strong>. Confira também a caixa de spam.'}</p>
       <label for="codigo">Código</label>
       <input id="codigo" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="6" pattern="[0-9]{6}" required />
       <button type="submit">Entrar</button>

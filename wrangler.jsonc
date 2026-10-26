@@ -20,6 +20,9 @@
   ],
 
   "vars": {
+    // "1" = login de teste (qualquer e-mail, código 123456, sem Hotmart nem Resend).
+    // Troque para "" quando terminar a configuração do login.
+    "MODO_TESTE": "1",
     "PRODUTO": "conteudo-improprio",
     // Aparece na tela de login e no e-mail do código
     "NOME_GUIA": "Guia para Proteger Seu Filho de Conteúdos Impróprios no Celular",

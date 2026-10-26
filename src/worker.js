@@ -17,6 +17,8 @@ const CODIGO_MINUTOS = 10;
 const MAX_TENTATIVAS = 5;
 const MAX_APARELHOS = 3;
 
+const CODIGO_TESTE = "123456";
+
 const LIBERA = ["PURCHASE_APPROVED", "PURCHASE_COMPLETE"];
 const CORTA = ["PURCHASE_REFUNDED", "PURCHASE_CHARGEBACK", "PURCHASE_CANCELED"];
 
@@ -28,7 +30,7 @@ export default {
 
     try {
       if (pathname === "/api/hotmart" && metodo === "POST") return webhookHotmart(request, env);
-      if (pathname === "/login" && metodo === "GET") return html(paginaLogin(env.NOME_GUIA));
+      if (pathname === "/login" && metodo === "GET") return html(paginaLogin(env.NOME_GUIA, modoTeste(env)));
       if (pathname === "/api/codigo" && metodo === "POST") return pedirCodigo(request, env);
       if (pathname === "/api/entrar" && metodo === "POST") return entrar(request, env);
       if (pathname === "/sair") return sair(request, env);
@@ -117,6 +119,17 @@ async function pedirCodigo(request, env) {
   const { email: bruto } = await request.json().catch(() => ({}));
   const email = normalizar(bruto);
   if (!email || !email.includes("@")) return json({ erro: "Digite um e-mail válido." }, 400);
+
+  // Modo de teste: qualquer e-mail entra com o código fixo, sem Hotmart nem Resend.
+  if (modoTeste(env)) {
+    await liberar(env, email, { origem: "teste" });
+    await env.DB.put(
+      "codigo:" + email,
+      JSON.stringify({ hash: await sha256(email + ":" + CODIGO_TESTE), tentativas: 0 }),
+      { expirationTtl: CODIGO_MINUTOS * 60 },
+    );
+    return json({ ok: true });
+  }
 
   const comprador = await env.DB.get("comprador:" + email, "json");
   if (!comprador || !comprador.ativo) {
@@ -241,6 +254,10 @@ async function admin(request, env, liberarAcesso) {
 }
 
 /* ---------- Utilitários ---------- */
+
+function modoTeste(env) {
+  return String(env.MODO_TESTE || "") === "1";
+}
 
 function normalizar(email) {
   return String(email || "").trim().toLowerCase();
