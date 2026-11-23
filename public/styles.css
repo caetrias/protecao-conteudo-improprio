@@ -1073,3 +1073,38 @@ summary:focus-visible {
   width: 20px;
   height: 20px;
 }
+
+/* ---------- Conheça o ECA Digital (fim da página) ---------- */
+
+.eca {
+  background: var(--rosa-suave);
+  border-top: 1px solid var(--borda);
+  padding: 32px 0;
+}
+.eca h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.eca p {
+  color: var(--texto-suave);
+  font-size: 0.9375rem;
+  max-width: 62ch;
+}
+.eca-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--rosa-escuro);
+  text-decoration: none;
+}
+.eca-link:hover {
+  text-decoration: underline;
+}
+.eca-link svg {
+  width: 16px;
+  height: 16px;
+}
