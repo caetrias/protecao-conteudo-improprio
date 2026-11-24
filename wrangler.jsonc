@@ -27,7 +27,7 @@
     // Aparece na tela de login e no e-mail do código
     "NOME_GUIA": "Guia para Proteger Seu Filho de Conteúdos Impróprios no Celular",
     // ID do produto na Hotmart. Com ele preenchido, vendas de outros produtos são ignoradas.
-    "HOTMART_PRODUCT_ID": "",
+    "HOTMART_PRODUCT_ID": "9046380",
     // Remetente do código. onboarding@resend.dev só serve para teste; troque pelo domínio verificado no Resend.
     "EMAIL_FROM": "Guia <onboarding@resend.dev>"
   },
